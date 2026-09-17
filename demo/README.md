@@ -31,9 +31,10 @@ demo/
 * Internet access on first configure (CMake `FetchContent` downloads
   [nlohmann/json](https://github.com/nlohmann/json))
 * [libpfm4](http://perfmon2.sourceforge.net/) development headers/library
-  (`sudo apt-get install libpfm4-dev` on Debian/Ubuntu), used to translate
-  the event names from the JSON into a `perf_event_attr`. If it isn't found,
-  `likwid_flops_profiler` is skipped and only the `likwid_hook` library is built.
+  (`sudo apt-get install libpfm4-dev` on Debian/Ubuntu, `sudo dnf install
+  libpfm-devel` on Red Hat/Fedora), used to translate the event names from
+  the JSON into a `perf_event_attr`. If it isn't found, `likwid_flops_profiler`
+  is skipped and only the `likwid_hook` library is built.
 * Sufficient permissions to use `perf_events` (e.g. `perf_event_paranoid` low
   enough, or `CAP_PERFMON`/root)
 
