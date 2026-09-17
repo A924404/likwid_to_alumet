@@ -4,7 +4,7 @@
     "groups_path": "groups",
     "branch": "master",
     "commit": "1f3346165252420efe43f60c7371ba0e5dac7ee1",
-    "generated_at": "2026-09-17T09:19:24.317911+00:00"
+    "generated_at": "2026-09-17T14:52:54.731088+00:00"
   },
   "architectures": {
     "6": [
@@ -28,8 +28,8 @@
               "units": "FLOP",
               "formula": "(PMC0*8.0+PMC2*16.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC0": "r20c7",
+                "PMC2": "r80c7"
               }
             },
             {
@@ -37,8 +37,8 @@
               "units": "FLOP",
               "formula": "(PMC1*4.0+PMC3*8.0)",
               "events": {
-                "PMC1": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC1": "r10c7",
+                "PMC3": "r40c7"
               }
             },
             {
@@ -46,10 +46,10 @@
               "units": "FLOP",
               "formula": "(PMC0*2.0+PMC1+PMC2*4.0+PMC3*8.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE",
-                "PMC1": "FP_ARITH_INST_RETIRED_SCALAR_DOUBLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC0": "r04c7",
+                "PMC1": "r01c7",
+                "PMC2": "r10c7",
+                "PMC3": "r40c7"
               }
             },
             {
@@ -57,8 +57,8 @@
               "units": "FLOP",
               "formula": "(PMC2*4.0+PMC3*8.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC2": "r10c7",
+                "PMC3": "r40c7"
               }
             },
             {
@@ -66,7 +66,7 @@
               "units": "FLOP",
               "formula": "(PMC3*8.0)",
               "events": {
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC3": "r40c7"
               }
             },
             {
@@ -74,10 +74,10 @@
               "units": "FLOP",
               "formula": "(PMC0*4.0+PMC1+PMC2*8.0+PMC3*16.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_128B_PACKED_SINGLE",
-                "PMC1": "FP_ARITH_INST_RETIRED_SCALAR_SINGLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC0": "r08c7",
+                "PMC1": "r02c7",
+                "PMC2": "r20c7",
+                "PMC3": "r80c7"
               }
             },
             {
@@ -85,8 +85,8 @@
               "units": "FLOP",
               "formula": "(PMC2*8.0+PMC3*16.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC2": "r20c7",
+                "PMC3": "r80c7"
               }
             },
             {
@@ -94,7 +94,7 @@
               "units": "FLOP",
               "formula": "(PMC3*16.0)",
               "events": {
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC3": "r80c7"
               }
             }
           ],
@@ -104,12 +104,12 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0+MBOX2C0+MBOX3C0+MBOX4C0+MBOX5C0)*64.0",
               "events": {
-                "MBOX0C0": "CAS_COUNT_RD",
-                "MBOX1C0": "CAS_COUNT_RD",
-                "MBOX2C0": "CAS_COUNT_RD",
-                "MBOX3C0": "CAS_COUNT_RD",
-                "MBOX4C0": "CAS_COUNT_RD",
-                "MBOX5C0": "CAS_COUNT_RD"
+                "MBOX0C0": "r0304",
+                "MBOX1C0": "r0304",
+                "MBOX2C0": "r0304",
+                "MBOX3C0": "r0304",
+                "MBOX4C0": "r0304",
+                "MBOX5C0": "r0304"
               }
             },
             {
@@ -117,12 +117,12 @@
               "units": "Bytes",
               "formula": "(MBOX0C1+MBOX1C1+MBOX2C1+MBOX3C1+MBOX4C1+MBOX5C1)*64.0",
               "events": {
-                "MBOX0C1": "CAS_COUNT_WR",
-                "MBOX1C1": "CAS_COUNT_WR",
-                "MBOX2C1": "CAS_COUNT_WR",
-                "MBOX3C1": "CAS_COUNT_WR",
-                "MBOX4C1": "CAS_COUNT_WR",
-                "MBOX5C1": "CAS_COUNT_WR"
+                "MBOX0C1": "r0c04",
+                "MBOX1C1": "r0c04",
+                "MBOX2C1": "r0c04",
+                "MBOX3C1": "r0c04",
+                "MBOX4C1": "r0c04",
+                "MBOX5C1": "r0c04"
               }
             },
             {
@@ -130,18 +130,18 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0+MBOX2C0+MBOX3C0+MBOX4C0+MBOX5C0+MBOX0C1+MBOX1C1+MBOX2C1+MBOX3C1+MBOX4C1+MBOX5C1)*64.0",
               "events": {
-                "MBOX0C0": "CAS_COUNT_RD",
-                "MBOX0C1": "CAS_COUNT_WR",
-                "MBOX1C0": "CAS_COUNT_RD",
-                "MBOX1C1": "CAS_COUNT_WR",
-                "MBOX2C0": "CAS_COUNT_RD",
-                "MBOX2C1": "CAS_COUNT_WR",
-                "MBOX3C0": "CAS_COUNT_RD",
-                "MBOX3C1": "CAS_COUNT_WR",
-                "MBOX4C0": "CAS_COUNT_RD",
-                "MBOX4C1": "CAS_COUNT_WR",
-                "MBOX5C0": "CAS_COUNT_RD",
-                "MBOX5C1": "CAS_COUNT_WR"
+                "MBOX0C0": "r0304",
+                "MBOX0C1": "r0c04",
+                "MBOX1C0": "r0304",
+                "MBOX1C1": "r0c04",
+                "MBOX2C0": "r0304",
+                "MBOX2C1": "r0c04",
+                "MBOX3C0": "r0304",
+                "MBOX3C1": "r0c04",
+                "MBOX4C0": "r0304",
+                "MBOX4C1": "r0c04",
+                "MBOX5C0": "r0304",
+                "MBOX5C1": "r0c04"
               }
             }
           ]
@@ -166,8 +166,8 @@
               "units": "FLOP",
               "formula": "(PMC0*8.0+PMC2*16.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC0": "r20c7",
+                "PMC2": "r80c7"
               }
             },
             {
@@ -175,8 +175,8 @@
               "units": "FLOP",
               "formula": "(PMC1*4.0+PMC3*8.0)",
               "events": {
-                "PMC1": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC1": "r10c7",
+                "PMC3": "r40c7"
               }
             },
             {
@@ -184,10 +184,10 @@
               "units": "FLOP",
               "formula": "(PMC0*2.0+PMC1+PMC2*4.0+PMC3*8.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE",
-                "PMC1": "FP_ARITH_INST_RETIRED_SCALAR_DOUBLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC0": "r04c7",
+                "PMC1": "r01c7",
+                "PMC2": "r10c7",
+                "PMC3": "r40c7"
               }
             },
             {
@@ -195,8 +195,8 @@
               "units": "FLOP",
               "formula": "(PMC2*4.0+PMC3*8.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC2": "r10c7",
+                "PMC3": "r40c7"
               }
             },
             {
@@ -204,7 +204,7 @@
               "units": "FLOP",
               "formula": "(PMC3*8.0)",
               "events": {
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC3": "r40c7"
               }
             },
             {
@@ -212,10 +212,10 @@
               "units": "FLOP",
               "formula": "(PMC0+PMC1*8.0+PMC2*16.0+PMC3*32.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED2_SCALAR",
-                "PMC1": "FP_ARITH_INST_RETIRED2_128B_PACKED_HALF",
-                "PMC2": "FP_ARITH_INST_RETIRED2_256B_PACKED_HALF",
-                "PMC3": "FP_ARITH_INST_RETIRED2_512B_PACKED_HALF"
+                "PMC0": "r03cf",
+                "PMC1": "r04cf",
+                "PMC2": "r08cf",
+                "PMC3": "r10cf"
               }
             },
             {
@@ -223,7 +223,7 @@
               "units": "FLOP",
               "formula": "(PMC1*8.0)",
               "events": {
-                "PMC1": "FP_ARITH_INST_RETIRED2_128B_PACKED_HALF"
+                "PMC1": "r04cf"
               }
             },
             {
@@ -231,7 +231,7 @@
               "units": "FLOP",
               "formula": "(PMC2*16.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED2_256B_PACKED_HALF"
+                "PMC2": "r08cf"
               }
             },
             {
@@ -239,7 +239,7 @@
               "units": "FLOP",
               "formula": "(PMC3*32.0)",
               "events": {
-                "PMC3": "FP_ARITH_INST_RETIRED2_512B_PACKED_HALF"
+                "PMC3": "r10cf"
               }
             },
             {
@@ -247,10 +247,10 @@
               "units": "FLOP",
               "formula": "(PMC0*4.0+PMC1+PMC2*8.0+PMC3*16.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_128B_PACKED_SINGLE",
-                "PMC1": "FP_ARITH_INST_RETIRED_SCALAR_SINGLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC0": "r08c7",
+                "PMC1": "r02c7",
+                "PMC2": "r20c7",
+                "PMC3": "r80c7"
               }
             },
             {
@@ -258,8 +258,8 @@
               "units": "FLOP",
               "formula": "(PMC2*8.0+PMC3*16.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC2": "r20c7",
+                "PMC3": "r80c7"
               }
             },
             {
@@ -267,7 +267,7 @@
               "units": "FLOP",
               "formula": "(PMC3*16.0)",
               "events": {
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC3": "r80c7"
               }
             }
           ],
@@ -277,18 +277,18 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0+MBOX2C0+MBOX3C0+MBOX4C0+MBOX5C0+MBOX6C0+MBOX7C0+MBOX8C0+MBOX9C0+MBOX10C0+MBOX11C0)*64.0",
               "events": {
-                "MBOX0C0": "CAS_COUNT_RD",
-                "MBOX10C0": "CAS_COUNT_RD",
-                "MBOX11C0": "CAS_COUNT_RD",
-                "MBOX1C0": "CAS_COUNT_RD",
-                "MBOX2C0": "CAS_COUNT_RD",
-                "MBOX3C0": "CAS_COUNT_RD",
-                "MBOX4C0": "CAS_COUNT_RD",
-                "MBOX5C0": "CAS_COUNT_RD",
-                "MBOX6C0": "CAS_COUNT_RD",
-                "MBOX7C0": "CAS_COUNT_RD",
-                "MBOX8C0": "CAS_COUNT_RD",
-                "MBOX9C0": "CAS_COUNT_RD"
+                "MBOX0C0": "rcf05",
+                "MBOX10C0": "rcf05",
+                "MBOX11C0": "rcf05",
+                "MBOX1C0": "rcf05",
+                "MBOX2C0": "rcf05",
+                "MBOX3C0": "rcf05",
+                "MBOX4C0": "rcf05",
+                "MBOX5C0": "rcf05",
+                "MBOX6C0": "rcf05",
+                "MBOX7C0": "rcf05",
+                "MBOX8C0": "rcf05",
+                "MBOX9C0": "rcf05"
               }
             },
             {
@@ -296,18 +296,18 @@
               "units": "Bytes",
               "formula": "(MBOX0C1+MBOX1C1+MBOX2C1+MBOX3C1+MBOX4C1+MBOX5C1+MBOX6C1+MBOX7C1+MBOX8C1+MBOX9C1+MBOX10C1+MBOX11C1)*64.0",
               "events": {
-                "MBOX0C1": "CAS_COUNT_WR",
-                "MBOX10C1": "CAS_COUNT_WR",
-                "MBOX11C1": "CAS_COUNT_WR",
-                "MBOX1C1": "CAS_COUNT_WR",
-                "MBOX2C1": "CAS_COUNT_WR",
-                "MBOX3C1": "CAS_COUNT_WR",
-                "MBOX4C1": "CAS_COUNT_WR",
-                "MBOX5C1": "CAS_COUNT_WR",
-                "MBOX6C1": "CAS_COUNT_WR",
-                "MBOX7C1": "CAS_COUNT_WR",
-                "MBOX8C1": "CAS_COUNT_WR",
-                "MBOX9C1": "CAS_COUNT_WR"
+                "MBOX0C1": "rf005",
+                "MBOX10C1": "rf005",
+                "MBOX11C1": "rf005",
+                "MBOX1C1": "rf005",
+                "MBOX2C1": "rf005",
+                "MBOX3C1": "rf005",
+                "MBOX4C1": "rf005",
+                "MBOX5C1": "rf005",
+                "MBOX6C1": "rf005",
+                "MBOX7C1": "rf005",
+                "MBOX8C1": "rf005",
+                "MBOX9C1": "rf005"
               }
             },
             {
@@ -315,30 +315,30 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0+MBOX2C0+MBOX3C0+MBOX4C0+MBOX5C0+MBOX6C0+MBOX7C0+MBOX8C0+MBOX9C0+MBOX10C0+MBOX11C0+MBOX0C1+MBOX1C1+MBOX2C1+MBOX3C1+MBOX4C1+MBOX5C1+MBOX6C1+MBOX7C1+MBOX8C1+MBOX9C1+MBOX10C1+MBOX11C1)*64.0",
               "events": {
-                "MBOX0C0": "CAS_COUNT_RD",
-                "MBOX0C1": "CAS_COUNT_WR",
-                "MBOX10C0": "CAS_COUNT_RD",
-                "MBOX10C1": "CAS_COUNT_WR",
-                "MBOX11C0": "CAS_COUNT_RD",
-                "MBOX11C1": "CAS_COUNT_WR",
-                "MBOX1C0": "CAS_COUNT_RD",
-                "MBOX1C1": "CAS_COUNT_WR",
-                "MBOX2C0": "CAS_COUNT_RD",
-                "MBOX2C1": "CAS_COUNT_WR",
-                "MBOX3C0": "CAS_COUNT_RD",
-                "MBOX3C1": "CAS_COUNT_WR",
-                "MBOX4C0": "CAS_COUNT_RD",
-                "MBOX4C1": "CAS_COUNT_WR",
-                "MBOX5C0": "CAS_COUNT_RD",
-                "MBOX5C1": "CAS_COUNT_WR",
-                "MBOX6C0": "CAS_COUNT_RD",
-                "MBOX6C1": "CAS_COUNT_WR",
-                "MBOX7C0": "CAS_COUNT_RD",
-                "MBOX7C1": "CAS_COUNT_WR",
-                "MBOX8C0": "CAS_COUNT_RD",
-                "MBOX8C1": "CAS_COUNT_WR",
-                "MBOX9C0": "CAS_COUNT_RD",
-                "MBOX9C1": "CAS_COUNT_WR"
+                "MBOX0C0": "rcf05",
+                "MBOX0C1": "rf005",
+                "MBOX10C0": "rcf05",
+                "MBOX10C1": "rf005",
+                "MBOX11C0": "rcf05",
+                "MBOX11C1": "rf005",
+                "MBOX1C0": "rcf05",
+                "MBOX1C1": "rf005",
+                "MBOX2C0": "rcf05",
+                "MBOX2C1": "rf005",
+                "MBOX3C0": "rcf05",
+                "MBOX3C1": "rf005",
+                "MBOX4C0": "rcf05",
+                "MBOX4C1": "rf005",
+                "MBOX5C0": "rcf05",
+                "MBOX5C1": "rf005",
+                "MBOX6C0": "rcf05",
+                "MBOX6C1": "rf005",
+                "MBOX7C0": "rcf05",
+                "MBOX7C1": "rf005",
+                "MBOX8C0": "rcf05",
+                "MBOX8C1": "rf005",
+                "MBOX9C0": "rcf05",
+                "MBOX9C1": "rf005"
               }
             }
           ]
@@ -363,8 +363,8 @@
               "units": "FLOP",
               "formula": "(PMC0*8.0+PMC2*16.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC0": "r20c7",
+                "PMC2": "r80c7"
               }
             },
             {
@@ -372,8 +372,8 @@
               "units": "FLOP",
               "formula": "(PMC1*4.0+PMC3*8.0)",
               "events": {
-                "PMC1": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC1": "r10c7",
+                "PMC3": "r40c7"
               }
             },
             {
@@ -381,10 +381,10 @@
               "units": "FLOP",
               "formula": "(PMC0*2.0+PMC1+PMC2*4.0+PMC3*8.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE",
-                "PMC1": "FP_ARITH_INST_RETIRED_SCALAR_DOUBLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC0": "r04c7",
+                "PMC1": "r01c7",
+                "PMC2": "r10c7",
+                "PMC3": "r40c7"
               }
             },
             {
@@ -392,8 +392,8 @@
               "units": "FLOP",
               "formula": "(PMC2*4.0+PMC3*8.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC2": "r10c7",
+                "PMC3": "r40c7"
               }
             },
             {
@@ -401,7 +401,7 @@
               "units": "FLOP",
               "formula": "(PMC3*8.0)",
               "events": {
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC3": "r40c7"
               }
             },
             {
@@ -409,10 +409,10 @@
               "units": "FLOP",
               "formula": "(PMC0+PMC1*8.0+PMC2*16.0+PMC3*32.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED2_SCALAR",
-                "PMC1": "FP_ARITH_INST_RETIRED2_128B_PACKED_HALF",
-                "PMC2": "FP_ARITH_INST_RETIRED2_256B_PACKED_HALF",
-                "PMC3": "FP_ARITH_INST_RETIRED2_512B_PACKED_HALF"
+                "PMC0": "r03cf",
+                "PMC1": "r04cf",
+                "PMC2": "r08cf",
+                "PMC3": "r10cf"
               }
             },
             {
@@ -420,7 +420,7 @@
               "units": "FLOP",
               "formula": "(PMC1*8.0)",
               "events": {
-                "PMC1": "FP_ARITH_INST_RETIRED2_128B_PACKED_HALF"
+                "PMC1": "r04cf"
               }
             },
             {
@@ -428,7 +428,7 @@
               "units": "FLOP",
               "formula": "(PMC2*16.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED2_256B_PACKED_HALF"
+                "PMC2": "r08cf"
               }
             },
             {
@@ -436,7 +436,7 @@
               "units": "FLOP",
               "formula": "(PMC3*32.0)",
               "events": {
-                "PMC3": "FP_ARITH_INST_RETIRED2_512B_PACKED_HALF"
+                "PMC3": "r10cf"
               }
             },
             {
@@ -444,10 +444,10 @@
               "units": "FLOP",
               "formula": "(PMC0*4.0+PMC1+PMC2*8.0+PMC3*16.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_128B_PACKED_SINGLE",
-                "PMC1": "FP_ARITH_INST_RETIRED_SCALAR_SINGLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC0": "r08c7",
+                "PMC1": "r02c7",
+                "PMC2": "r20c7",
+                "PMC3": "r80c7"
               }
             },
             {
@@ -455,8 +455,8 @@
               "units": "FLOP",
               "formula": "(PMC2*8.0+PMC3*16.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC2": "r20c7",
+                "PMC3": "r80c7"
               }
             },
             {
@@ -464,7 +464,7 @@
               "units": "FLOP",
               "formula": "(PMC3*16.0)",
               "events": {
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC3": "r80c7"
               }
             }
           ],
@@ -474,30 +474,30 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX0C2+MBOX1C0+MBOX1C2+MBOX2C0+MBOX2C2+MBOX3C0+MBOX3C2+MBOX4C0+MBOX4C2+MBOX5C0+MBOX5C2+MBOX6C0+MBOX6C2+MBOX7C0+MBOX7C2+MBOX8C0+MBOX8C2+MBOX9C0+MBOX9C2+MBOX10C0+MBOX10C2+MBOX11C0+MBOX11C2)*64.0",
               "events": {
-                "MBOX0C0": "CAS_COUNT_SCH0_RD",
-                "MBOX0C2": "CAS_COUNT_SCH1_RD",
-                "MBOX10C0": "CAS_COUNT_SCH0_RD",
-                "MBOX10C2": "CAS_COUNT_SCH1_RD",
-                "MBOX11C0": "CAS_COUNT_SCH0_RD",
-                "MBOX11C2": "CAS_COUNT_SCH1_RD",
-                "MBOX1C0": "CAS_COUNT_SCH0_RD",
-                "MBOX1C2": "CAS_COUNT_SCH1_RD",
-                "MBOX2C0": "CAS_COUNT_SCH0_RD",
-                "MBOX2C2": "CAS_COUNT_SCH1_RD",
-                "MBOX3C0": "CAS_COUNT_SCH0_RD",
-                "MBOX3C2": "CAS_COUNT_SCH1_RD",
-                "MBOX4C0": "CAS_COUNT_SCH0_RD",
-                "MBOX4C2": "CAS_COUNT_SCH1_RD",
-                "MBOX5C0": "CAS_COUNT_SCH0_RD",
-                "MBOX5C2": "CAS_COUNT_SCH1_RD",
-                "MBOX6C0": "CAS_COUNT_SCH0_RD",
-                "MBOX6C2": "CAS_COUNT_SCH1_RD",
-                "MBOX7C0": "CAS_COUNT_SCH0_RD",
-                "MBOX7C2": "CAS_COUNT_SCH1_RD",
-                "MBOX8C0": "CAS_COUNT_SCH0_RD",
-                "MBOX8C2": "CAS_COUNT_SCH1_RD",
-                "MBOX9C0": "CAS_COUNT_SCH0_RD",
-                "MBOX9C2": "CAS_COUNT_SCH1_RD"
+                "MBOX0C0": "rcf05",
+                "MBOX0C2": "rcf06",
+                "MBOX10C0": "rcf05",
+                "MBOX10C2": "rcf06",
+                "MBOX11C0": "rcf05",
+                "MBOX11C2": "rcf06",
+                "MBOX1C0": "rcf05",
+                "MBOX1C2": "rcf06",
+                "MBOX2C0": "rcf05",
+                "MBOX2C2": "rcf06",
+                "MBOX3C0": "rcf05",
+                "MBOX3C2": "rcf06",
+                "MBOX4C0": "rcf05",
+                "MBOX4C2": "rcf06",
+                "MBOX5C0": "rcf05",
+                "MBOX5C2": "rcf06",
+                "MBOX6C0": "rcf05",
+                "MBOX6C2": "rcf06",
+                "MBOX7C0": "rcf05",
+                "MBOX7C2": "rcf06",
+                "MBOX8C0": "rcf05",
+                "MBOX8C2": "rcf06",
+                "MBOX9C0": "rcf05",
+                "MBOX9C2": "rcf06"
               }
             },
             {
@@ -505,30 +505,30 @@
               "units": "Bytes",
               "formula": "(MBOX0C1+MBOX0C3+MBOX1C1+MBOX1C3+MBOX2C1+MBOX2C3+MBOX3C1+MBOX3C3+MBOX4C1+MBOX4C3+MBOX5C1+MBOX5C3+MBOX6C1+MBOX6C3+MBOX7C1+MBOX7C3+MBOX8C1+MBOX8C3+MBOX9C1+MBOX9C3+MBOX10C1+MBOX10C3+MBOX11C1+MBOX11C3)*64.0",
               "events": {
-                "MBOX0C1": "CAS_COUNT_SCH0_WR",
-                "MBOX0C3": "CAS_COUNT_SCH1_WR",
-                "MBOX10C1": "CAS_COUNT_SCH0_WR",
-                "MBOX10C3": "CAS_COUNT_SCH1_WR",
-                "MBOX11C1": "CAS_COUNT_SCH0_WR",
-                "MBOX11C3": "CAS_COUNT_SCH1_WR",
-                "MBOX1C1": "CAS_COUNT_SCH0_WR",
-                "MBOX1C3": "CAS_COUNT_SCH1_WR",
-                "MBOX2C1": "CAS_COUNT_SCH0_WR",
-                "MBOX2C3": "CAS_COUNT_SCH1_WR",
-                "MBOX3C1": "CAS_COUNT_SCH0_WR",
-                "MBOX3C3": "CAS_COUNT_SCH1_WR",
-                "MBOX4C1": "CAS_COUNT_SCH0_WR",
-                "MBOX4C3": "CAS_COUNT_SCH1_WR",
-                "MBOX5C1": "CAS_COUNT_SCH0_WR",
-                "MBOX5C3": "CAS_COUNT_SCH1_WR",
-                "MBOX6C1": "CAS_COUNT_SCH0_WR",
-                "MBOX6C3": "CAS_COUNT_SCH1_WR",
-                "MBOX7C1": "CAS_COUNT_SCH0_WR",
-                "MBOX7C3": "CAS_COUNT_SCH1_WR",
-                "MBOX8C1": "CAS_COUNT_SCH0_WR",
-                "MBOX8C3": "CAS_COUNT_SCH1_WR",
-                "MBOX9C1": "CAS_COUNT_SCH0_WR",
-                "MBOX9C3": "CAS_COUNT_SCH1_WR"
+                "MBOX0C1": "rf005",
+                "MBOX0C3": "rf006",
+                "MBOX10C1": "rf005",
+                "MBOX10C3": "rf006",
+                "MBOX11C1": "rf005",
+                "MBOX11C3": "rf006",
+                "MBOX1C1": "rf005",
+                "MBOX1C3": "rf006",
+                "MBOX2C1": "rf005",
+                "MBOX2C3": "rf006",
+                "MBOX3C1": "rf005",
+                "MBOX3C3": "rf006",
+                "MBOX4C1": "rf005",
+                "MBOX4C3": "rf006",
+                "MBOX5C1": "rf005",
+                "MBOX5C3": "rf006",
+                "MBOX6C1": "rf005",
+                "MBOX6C3": "rf006",
+                "MBOX7C1": "rf005",
+                "MBOX7C3": "rf006",
+                "MBOX8C1": "rf005",
+                "MBOX8C3": "rf006",
+                "MBOX9C1": "rf005",
+                "MBOX9C3": "rf006"
               }
             },
             {
@@ -536,54 +536,54 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX0C2+MBOX1C0+MBOX1C2+MBOX2C0+MBOX2C2+MBOX3C0+MBOX3C2+MBOX4C0+MBOX4C2+MBOX5C0+MBOX5C2+MBOX6C0+MBOX6C2+MBOX7C0+MBOX7C2+MBOX8C0+MBOX8C2+MBOX9C0+MBOX9C2+MBOX10C0+MBOX10C2+MBOX11C0+MBOX11C2+MBOX0C1+MBOX0C3+MBOX1C1+MBOX1C3+MBOX2C1+MBOX2C3+MBOX3C1+MBOX3C3+MBOX4C1+MBOX4C3+MBOX5C1+MBOX5C3+MBOX6C1+MBOX6C3+MBOX7C1+MBOX7C3+MBOX8C1+MBOX8C3+MBOX9C1+MBOX9C3+MBOX10C1+MBOX10C3+MBOX11C1+MBOX11C3)*64.0",
               "events": {
-                "MBOX0C0": "CAS_COUNT_SCH0_RD",
-                "MBOX0C1": "CAS_COUNT_SCH0_WR",
-                "MBOX0C2": "CAS_COUNT_SCH1_RD",
-                "MBOX0C3": "CAS_COUNT_SCH1_WR",
-                "MBOX10C0": "CAS_COUNT_SCH0_RD",
-                "MBOX10C1": "CAS_COUNT_SCH0_WR",
-                "MBOX10C2": "CAS_COUNT_SCH1_RD",
-                "MBOX10C3": "CAS_COUNT_SCH1_WR",
-                "MBOX11C0": "CAS_COUNT_SCH0_RD",
-                "MBOX11C1": "CAS_COUNT_SCH0_WR",
-                "MBOX11C2": "CAS_COUNT_SCH1_RD",
-                "MBOX11C3": "CAS_COUNT_SCH1_WR",
-                "MBOX1C0": "CAS_COUNT_SCH0_RD",
-                "MBOX1C1": "CAS_COUNT_SCH0_WR",
-                "MBOX1C2": "CAS_COUNT_SCH1_RD",
-                "MBOX1C3": "CAS_COUNT_SCH1_WR",
-                "MBOX2C0": "CAS_COUNT_SCH0_RD",
-                "MBOX2C1": "CAS_COUNT_SCH0_WR",
-                "MBOX2C2": "CAS_COUNT_SCH1_RD",
-                "MBOX2C3": "CAS_COUNT_SCH1_WR",
-                "MBOX3C0": "CAS_COUNT_SCH0_RD",
-                "MBOX3C1": "CAS_COUNT_SCH0_WR",
-                "MBOX3C2": "CAS_COUNT_SCH1_RD",
-                "MBOX3C3": "CAS_COUNT_SCH1_WR",
-                "MBOX4C0": "CAS_COUNT_SCH0_RD",
-                "MBOX4C1": "CAS_COUNT_SCH0_WR",
-                "MBOX4C2": "CAS_COUNT_SCH1_RD",
-                "MBOX4C3": "CAS_COUNT_SCH1_WR",
-                "MBOX5C0": "CAS_COUNT_SCH0_RD",
-                "MBOX5C1": "CAS_COUNT_SCH0_WR",
-                "MBOX5C2": "CAS_COUNT_SCH1_RD",
-                "MBOX5C3": "CAS_COUNT_SCH1_WR",
-                "MBOX6C0": "CAS_COUNT_SCH0_RD",
-                "MBOX6C1": "CAS_COUNT_SCH0_WR",
-                "MBOX6C2": "CAS_COUNT_SCH1_RD",
-                "MBOX6C3": "CAS_COUNT_SCH1_WR",
-                "MBOX7C0": "CAS_COUNT_SCH0_RD",
-                "MBOX7C1": "CAS_COUNT_SCH0_WR",
-                "MBOX7C2": "CAS_COUNT_SCH1_RD",
-                "MBOX7C3": "CAS_COUNT_SCH1_WR",
-                "MBOX8C0": "CAS_COUNT_SCH0_RD",
-                "MBOX8C1": "CAS_COUNT_SCH0_WR",
-                "MBOX8C2": "CAS_COUNT_SCH1_RD",
-                "MBOX8C3": "CAS_COUNT_SCH1_WR",
-                "MBOX9C0": "CAS_COUNT_SCH0_RD",
-                "MBOX9C1": "CAS_COUNT_SCH0_WR",
-                "MBOX9C2": "CAS_COUNT_SCH1_RD",
-                "MBOX9C3": "CAS_COUNT_SCH1_WR"
+                "MBOX0C0": "rcf05",
+                "MBOX0C1": "rf005",
+                "MBOX0C2": "rcf06",
+                "MBOX0C3": "rf006",
+                "MBOX10C0": "rcf05",
+                "MBOX10C1": "rf005",
+                "MBOX10C2": "rcf06",
+                "MBOX10C3": "rf006",
+                "MBOX11C0": "rcf05",
+                "MBOX11C1": "rf005",
+                "MBOX11C2": "rcf06",
+                "MBOX11C3": "rf006",
+                "MBOX1C0": "rcf05",
+                "MBOX1C1": "rf005",
+                "MBOX1C2": "rcf06",
+                "MBOX1C3": "rf006",
+                "MBOX2C0": "rcf05",
+                "MBOX2C1": "rf005",
+                "MBOX2C2": "rcf06",
+                "MBOX2C3": "rf006",
+                "MBOX3C0": "rcf05",
+                "MBOX3C1": "rf005",
+                "MBOX3C2": "rcf06",
+                "MBOX3C3": "rf006",
+                "MBOX4C0": "rcf05",
+                "MBOX4C1": "rf005",
+                "MBOX4C2": "rcf06",
+                "MBOX4C3": "rf006",
+                "MBOX5C0": "rcf05",
+                "MBOX5C1": "rf005",
+                "MBOX5C2": "rcf06",
+                "MBOX5C3": "rf006",
+                "MBOX6C0": "rcf05",
+                "MBOX6C1": "rf005",
+                "MBOX6C2": "rcf06",
+                "MBOX6C3": "rf006",
+                "MBOX7C0": "rcf05",
+                "MBOX7C1": "rf005",
+                "MBOX7C2": "rcf06",
+                "MBOX7C3": "rf006",
+                "MBOX8C0": "rcf05",
+                "MBOX8C1": "rf005",
+                "MBOX8C2": "rcf06",
+                "MBOX8C3": "rf006",
+                "MBOX9C0": "rcf05",
+                "MBOX9C1": "rf005",
+                "MBOX9C2": "rcf06",
+                "MBOX9C3": "rf006"
               }
             }
           ]
@@ -612,8 +612,8 @@
               "units": "FLOP",
               "formula": "(PMC0*8.0+PMC2*16.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC0": "r20c7",
+                "PMC2": "r80c7"
               }
             },
             {
@@ -621,8 +621,8 @@
               "units": "FLOP",
               "formula": "(PMC1*4.0+PMC3*8.0)",
               "events": {
-                "PMC1": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC1": "r10c7",
+                "PMC3": "r40c7"
               }
             },
             {
@@ -630,10 +630,10 @@
               "units": "FLOP",
               "formula": "(PMC0*2.0+PMC1+PMC2*4.0+PMC3*8.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE",
-                "PMC1": "FP_ARITH_INST_RETIRED_SCALAR_DOUBLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC0": "r04c7",
+                "PMC1": "r01c7",
+                "PMC2": "r10c7",
+                "PMC3": "r40c7"
               }
             },
             {
@@ -641,8 +641,8 @@
               "units": "FLOP",
               "formula": "(PMC2*4.0+PMC3*8.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC2": "r10c7",
+                "PMC3": "r40c7"
               }
             },
             {
@@ -650,7 +650,7 @@
               "units": "FLOP",
               "formula": "(PMC3*8.0)",
               "events": {
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC3": "r40c7"
               }
             },
             {
@@ -658,10 +658,10 @@
               "units": "FLOP",
               "formula": "(PMC0*4.0+PMC1+PMC2*8.0+PMC3*16.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_128B_PACKED_SINGLE",
-                "PMC1": "FP_ARITH_INST_RETIRED_SCALAR_SINGLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC0": "r08c7",
+                "PMC1": "r02c7",
+                "PMC2": "r20c7",
+                "PMC3": "r80c7"
               }
             },
             {
@@ -669,8 +669,8 @@
               "units": "FLOP",
               "formula": "(PMC2*8.0+PMC3*16.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC2": "r20c7",
+                "PMC3": "r80c7"
               }
             },
             {
@@ -678,7 +678,7 @@
               "units": "FLOP",
               "formula": "(PMC3*16.0)",
               "events": {
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC3": "r80c7"
               }
             }
           ],
@@ -688,7 +688,7 @@
               "units": "Bytes",
               "formula": "MBOX0C1*64.0",
               "events": {
-                "MBOX0C1": "DRAM_READS"
+                "MBOX0C1": "r0101"
               }
             },
             {
@@ -696,7 +696,7 @@
               "units": "Bytes",
               "formula": "MBOX0C2*64.0",
               "events": {
-                "MBOX0C2": "DRAM_WRITES"
+                "MBOX0C2": "r0202"
               }
             },
             {
@@ -704,8 +704,8 @@
               "units": "Bytes",
               "formula": "(MBOX0C1+MBOX0C2)*64.0",
               "events": {
-                "MBOX0C1": "DRAM_READS",
-                "MBOX0C2": "DRAM_WRITES"
+                "MBOX0C1": "r0101",
+                "MBOX0C2": "r0202"
               }
             }
           ]
@@ -734,8 +734,8 @@
               "units": "FLOP",
               "formula": "(PMC0*8.0+PMC2*16.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC0": "r20c7",
+                "PMC2": "r80c7"
               }
             },
             {
@@ -743,8 +743,8 @@
               "units": "FLOP",
               "formula": "(PMC1*4.0+PMC3*8.0)",
               "events": {
-                "PMC1": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC1": "r10c7",
+                "PMC3": "r40c7"
               }
             },
             {
@@ -752,10 +752,10 @@
               "units": "FLOP",
               "formula": "(PMC0*2.0+PMC1+PMC2*4.0+PMC3*8.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE",
-                "PMC1": "FP_ARITH_INST_RETIRED_SCALAR_DOUBLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC0": "r04c7",
+                "PMC1": "r01c7",
+                "PMC2": "r10c7",
+                "PMC3": "r40c7"
               }
             },
             {
@@ -763,8 +763,8 @@
               "units": "FLOP",
               "formula": "(PMC2*4.0+PMC3*8.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC2": "r10c7",
+                "PMC3": "r40c7"
               }
             },
             {
@@ -772,7 +772,7 @@
               "units": "FLOP",
               "formula": "(PMC3*8.0)",
               "events": {
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC3": "r40c7"
               }
             },
             {
@@ -780,10 +780,10 @@
               "units": "FLOP",
               "formula": "(PMC0*4.0+PMC1+PMC2*8.0+PMC3*16.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_128B_PACKED_SINGLE",
-                "PMC1": "FP_ARITH_INST_RETIRED_SCALAR_SINGLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC0": "r08c7",
+                "PMC1": "r02c7",
+                "PMC2": "r20c7",
+                "PMC3": "r80c7"
               }
             },
             {
@@ -791,8 +791,8 @@
               "units": "FLOP",
               "formula": "(PMC2*8.0+PMC3*16.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC2": "r20c7",
+                "PMC3": "r80c7"
               }
             },
             {
@@ -800,7 +800,7 @@
               "units": "FLOP",
               "formula": "(PMC3*16.0)",
               "events": {
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC3": "r80c7"
               }
             }
           ],
@@ -810,14 +810,14 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0+MBOX2C0+MBOX3C0+MBOX4C0+MBOX5C0+MBOX6C0+MBOX7C0)*64.0",
               "events": {
-                "MBOX0C0": "CAS_COUNT_RD",
-                "MBOX1C0": "CAS_COUNT_RD",
-                "MBOX2C0": "CAS_COUNT_RD",
-                "MBOX3C0": "CAS_COUNT_RD",
-                "MBOX4C0": "CAS_COUNT_RD",
-                "MBOX5C0": "CAS_COUNT_RD",
-                "MBOX6C0": "CAS_COUNT_RD",
-                "MBOX7C0": "CAS_COUNT_RD"
+                "MBOX0C0": "r0f04",
+                "MBOX1C0": "r0f04",
+                "MBOX2C0": "r0f04",
+                "MBOX3C0": "r0f04",
+                "MBOX4C0": "r0f04",
+                "MBOX5C0": "r0f04",
+                "MBOX6C0": "r0f04",
+                "MBOX7C0": "r0f04"
               }
             },
             {
@@ -825,14 +825,14 @@
               "units": "Bytes",
               "formula": "(MBOX0C1+MBOX1C1+MBOX2C1+MBOX3C1+MBOX4C1+MBOX5C1+MBOX6C1+MBOX7C1)*64.0",
               "events": {
-                "MBOX0C1": "CAS_COUNT_WR",
-                "MBOX1C1": "CAS_COUNT_WR",
-                "MBOX2C1": "CAS_COUNT_WR",
-                "MBOX3C1": "CAS_COUNT_WR",
-                "MBOX4C1": "CAS_COUNT_WR",
-                "MBOX5C1": "CAS_COUNT_WR",
-                "MBOX6C1": "CAS_COUNT_WR",
-                "MBOX7C1": "CAS_COUNT_WR"
+                "MBOX0C1": "r3004",
+                "MBOX1C1": "r3004",
+                "MBOX2C1": "r3004",
+                "MBOX3C1": "r3004",
+                "MBOX4C1": "r3004",
+                "MBOX5C1": "r3004",
+                "MBOX6C1": "r3004",
+                "MBOX7C1": "r3004"
               }
             },
             {
@@ -840,22 +840,22 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0+MBOX2C0+MBOX3C0+MBOX4C0+MBOX5C0+MBOX6C0+MBOX7C0+MBOX0C1+MBOX1C1+MBOX2C1+MBOX3C1+MBOX4C1+MBOX5C1+MBOX6C1+MBOX7C1)*64.0",
               "events": {
-                "MBOX0C0": "CAS_COUNT_RD",
-                "MBOX0C1": "CAS_COUNT_WR",
-                "MBOX1C0": "CAS_COUNT_RD",
-                "MBOX1C1": "CAS_COUNT_WR",
-                "MBOX2C0": "CAS_COUNT_RD",
-                "MBOX2C1": "CAS_COUNT_WR",
-                "MBOX3C0": "CAS_COUNT_RD",
-                "MBOX3C1": "CAS_COUNT_WR",
-                "MBOX4C0": "CAS_COUNT_RD",
-                "MBOX4C1": "CAS_COUNT_WR",
-                "MBOX5C0": "CAS_COUNT_RD",
-                "MBOX5C1": "CAS_COUNT_WR",
-                "MBOX6C0": "CAS_COUNT_RD",
-                "MBOX6C1": "CAS_COUNT_WR",
-                "MBOX7C0": "CAS_COUNT_RD",
-                "MBOX7C1": "CAS_COUNT_WR"
+                "MBOX0C0": "r0f04",
+                "MBOX0C1": "r3004",
+                "MBOX1C0": "r0f04",
+                "MBOX1C1": "r3004",
+                "MBOX2C0": "r0f04",
+                "MBOX2C1": "r3004",
+                "MBOX3C0": "r0f04",
+                "MBOX3C1": "r3004",
+                "MBOX4C0": "r0f04",
+                "MBOX4C1": "r3004",
+                "MBOX5C0": "r0f04",
+                "MBOX5C1": "r3004",
+                "MBOX6C0": "r0f04",
+                "MBOX6C1": "r3004",
+                "MBOX7C0": "r0f04",
+                "MBOX7C1": "r3004"
               }
             }
           ]
@@ -880,8 +880,8 @@
               "units": "FLOP",
               "formula": "(PMC0*8.0+PMC2*16.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC0": "r20c7",
+                "PMC2": "r80c7"
               }
             },
             {
@@ -889,8 +889,8 @@
               "units": "FLOP",
               "formula": "(PMC1*4.0+PMC3*8.0)",
               "events": {
-                "PMC1": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC1": "r10c7",
+                "PMC3": "r40c7"
               }
             },
             {
@@ -898,10 +898,10 @@
               "units": "FLOP",
               "formula": "(PMC0*2.0+PMC1+PMC2*4.0+PMC3*8.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE",
-                "PMC1": "FP_ARITH_INST_RETIRED_SCALAR_DOUBLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC0": "r04c7",
+                "PMC1": "r01c7",
+                "PMC2": "r10c7",
+                "PMC3": "r40c7"
               }
             },
             {
@@ -909,8 +909,8 @@
               "units": "FLOP",
               "formula": "(PMC2*4.0+PMC3*8.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC2": "r10c7",
+                "PMC3": "r40c7"
               }
             },
             {
@@ -918,7 +918,7 @@
               "units": "FLOP",
               "formula": "(PMC3*8.0)",
               "events": {
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC3": "r40c7"
               }
             },
             {
@@ -926,10 +926,10 @@
               "units": "FLOP",
               "formula": "(PMC0*4.0+PMC1+PMC2*8.0+PMC3*16.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_128B_PACKED_SINGLE",
-                "PMC1": "FP_ARITH_INST_RETIRED_SCALAR_SINGLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC0": "r08c7",
+                "PMC1": "r02c7",
+                "PMC2": "r20c7",
+                "PMC3": "r80c7"
               }
             },
             {
@@ -937,8 +937,8 @@
               "units": "FLOP",
               "formula": "(PMC2*8.0+PMC3*16.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC2": "r20c7",
+                "PMC3": "r80c7"
               }
             },
             {
@@ -946,7 +946,7 @@
               "units": "FLOP",
               "formula": "(PMC3*16.0)",
               "events": {
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC3": "r80c7"
               }
             }
           ],
@@ -972,8 +972,8 @@
               "units": "FLOP",
               "formula": "(PMC0*8.0+PMC2*16.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC0": "r20c7",
+                "PMC2": "r80c7"
               }
             },
             {
@@ -981,8 +981,8 @@
               "units": "FLOP",
               "formula": "(PMC1*4.0+PMC3*8.0)",
               "events": {
-                "PMC1": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC1": "r10c7",
+                "PMC3": "r40c7"
               }
             },
             {
@@ -990,10 +990,10 @@
               "units": "FLOP",
               "formula": "(PMC0*2.0+PMC1+PMC2*4.0+PMC3*8.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE",
-                "PMC1": "FP_ARITH_INST_RETIRED_SCALAR_DOUBLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC0": "r04c7",
+                "PMC1": "r01c7",
+                "PMC2": "r10c7",
+                "PMC3": "r40c7"
               }
             },
             {
@@ -1001,8 +1001,8 @@
               "units": "FLOP",
               "formula": "(PMC2*4.0+PMC3*8.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC2": "r10c7",
+                "PMC3": "r40c7"
               }
             },
             {
@@ -1010,7 +1010,7 @@
               "units": "FLOP",
               "formula": "(PMC3*8.0)",
               "events": {
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC3": "r40c7"
               }
             },
             {
@@ -1018,10 +1018,10 @@
               "units": "FLOP",
               "formula": "(PMC0+PMC1*8.0+PMC2*16.0+PMC3*32.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED2_SCALAR",
-                "PMC1": "FP_ARITH_INST_RETIRED2_128B_PACKED_HALF",
-                "PMC2": "FP_ARITH_INST_RETIRED2_256B_PACKED_HALF",
-                "PMC3": "FP_ARITH_INST_RETIRED2_512B_PACKED_HALF"
+                "PMC0": "r03cf",
+                "PMC1": "r04cf",
+                "PMC2": "r08cf",
+                "PMC3": "r10cf"
               }
             },
             {
@@ -1029,7 +1029,7 @@
               "units": "FLOP",
               "formula": "(PMC1*8.0)",
               "events": {
-                "PMC1": "FP_ARITH_INST_RETIRED2_128B_PACKED_HALF"
+                "PMC1": "r04cf"
               }
             },
             {
@@ -1037,7 +1037,7 @@
               "units": "FLOP",
               "formula": "(PMC2*16.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED2_256B_PACKED_HALF"
+                "PMC2": "r08cf"
               }
             },
             {
@@ -1045,7 +1045,7 @@
               "units": "FLOP",
               "formula": "(PMC3*32.0)",
               "events": {
-                "PMC3": "FP_ARITH_INST_RETIRED2_512B_PACKED_HALF"
+                "PMC3": "r10cf"
               }
             },
             {
@@ -1053,10 +1053,10 @@
               "units": "FLOP",
               "formula": "(PMC0*4.0+PMC1+PMC2*8.0+PMC3*16.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_128B_PACKED_SINGLE",
-                "PMC1": "FP_ARITH_INST_RETIRED_SCALAR_SINGLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC0": "r08c7",
+                "PMC1": "r02c7",
+                "PMC2": "r20c7",
+                "PMC3": "r80c7"
               }
             },
             {
@@ -1064,8 +1064,8 @@
               "units": "FLOP",
               "formula": "(PMC2*8.0+PMC3*16.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC2": "r20c7",
+                "PMC3": "r80c7"
               }
             },
             {
@@ -1073,7 +1073,7 @@
               "units": "FLOP",
               "formula": "(PMC3*16.0)",
               "events": {
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC3": "r80c7"
               }
             }
           ],
@@ -1083,18 +1083,18 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0+MBOX2C0+MBOX3C0+MBOX4C0+MBOX5C0+MBOX6C0+MBOX7C0+MBOX8C0+MBOX9C0+MBOX10C0+MBOX11C0)*64.0",
               "events": {
-                "MBOX0C0": "CAS_COUNT_RD",
-                "MBOX10C0": "CAS_COUNT_RD",
-                "MBOX11C0": "CAS_COUNT_RD",
-                "MBOX1C0": "CAS_COUNT_RD",
-                "MBOX2C0": "CAS_COUNT_RD",
-                "MBOX3C0": "CAS_COUNT_RD",
-                "MBOX4C0": "CAS_COUNT_RD",
-                "MBOX5C0": "CAS_COUNT_RD",
-                "MBOX6C0": "CAS_COUNT_RD",
-                "MBOX7C0": "CAS_COUNT_RD",
-                "MBOX8C0": "CAS_COUNT_RD",
-                "MBOX9C0": "CAS_COUNT_RD"
+                "MBOX0C0": "rcf05",
+                "MBOX10C0": "rcf05",
+                "MBOX11C0": "rcf05",
+                "MBOX1C0": "rcf05",
+                "MBOX2C0": "rcf05",
+                "MBOX3C0": "rcf05",
+                "MBOX4C0": "rcf05",
+                "MBOX5C0": "rcf05",
+                "MBOX6C0": "rcf05",
+                "MBOX7C0": "rcf05",
+                "MBOX8C0": "rcf05",
+                "MBOX9C0": "rcf05"
               }
             },
             {
@@ -1102,18 +1102,18 @@
               "units": "Bytes",
               "formula": "(MBOX0C1+MBOX1C1+MBOX2C1+MBOX3C1+MBOX4C1+MBOX5C1+MBOX6C1+MBOX7C1+MBOX8C1+MBOX9C1+MBOX10C1+MBOX11C1)*64.0",
               "events": {
-                "MBOX0C1": "CAS_COUNT_WR",
-                "MBOX10C1": "CAS_COUNT_WR",
-                "MBOX11C1": "CAS_COUNT_WR",
-                "MBOX1C1": "CAS_COUNT_WR",
-                "MBOX2C1": "CAS_COUNT_WR",
-                "MBOX3C1": "CAS_COUNT_WR",
-                "MBOX4C1": "CAS_COUNT_WR",
-                "MBOX5C1": "CAS_COUNT_WR",
-                "MBOX6C1": "CAS_COUNT_WR",
-                "MBOX7C1": "CAS_COUNT_WR",
-                "MBOX8C1": "CAS_COUNT_WR",
-                "MBOX9C1": "CAS_COUNT_WR"
+                "MBOX0C1": "rf005",
+                "MBOX10C1": "rf005",
+                "MBOX11C1": "rf005",
+                "MBOX1C1": "rf005",
+                "MBOX2C1": "rf005",
+                "MBOX3C1": "rf005",
+                "MBOX4C1": "rf005",
+                "MBOX5C1": "rf005",
+                "MBOX6C1": "rf005",
+                "MBOX7C1": "rf005",
+                "MBOX8C1": "rf005",
+                "MBOX9C1": "rf005"
               }
             },
             {
@@ -1121,30 +1121,30 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0+MBOX2C0+MBOX3C0+MBOX4C0+MBOX5C0+MBOX6C0+MBOX7C0+MBOX8C0+MBOX9C0+MBOX10C0+MBOX11C0+MBOX0C1+MBOX1C1+MBOX2C1+MBOX3C1+MBOX4C1+MBOX5C1+MBOX6C1+MBOX7C1+MBOX8C1+MBOX9C1+MBOX10C1+MBOX11C1)*64.0",
               "events": {
-                "MBOX0C0": "CAS_COUNT_RD",
-                "MBOX0C1": "CAS_COUNT_WR",
-                "MBOX10C0": "CAS_COUNT_RD",
-                "MBOX10C1": "CAS_COUNT_WR",
-                "MBOX11C0": "CAS_COUNT_RD",
-                "MBOX11C1": "CAS_COUNT_WR",
-                "MBOX1C0": "CAS_COUNT_RD",
-                "MBOX1C1": "CAS_COUNT_WR",
-                "MBOX2C0": "CAS_COUNT_RD",
-                "MBOX2C1": "CAS_COUNT_WR",
-                "MBOX3C0": "CAS_COUNT_RD",
-                "MBOX3C1": "CAS_COUNT_WR",
-                "MBOX4C0": "CAS_COUNT_RD",
-                "MBOX4C1": "CAS_COUNT_WR",
-                "MBOX5C0": "CAS_COUNT_RD",
-                "MBOX5C1": "CAS_COUNT_WR",
-                "MBOX6C0": "CAS_COUNT_RD",
-                "MBOX6C1": "CAS_COUNT_WR",
-                "MBOX7C0": "CAS_COUNT_RD",
-                "MBOX7C1": "CAS_COUNT_WR",
-                "MBOX8C0": "CAS_COUNT_RD",
-                "MBOX8C1": "CAS_COUNT_WR",
-                "MBOX9C0": "CAS_COUNT_RD",
-                "MBOX9C1": "CAS_COUNT_WR"
+                "MBOX0C0": "rcf05",
+                "MBOX0C1": "rf005",
+                "MBOX10C0": "rcf05",
+                "MBOX10C1": "rf005",
+                "MBOX11C0": "rcf05",
+                "MBOX11C1": "rf005",
+                "MBOX1C0": "rcf05",
+                "MBOX1C1": "rf005",
+                "MBOX2C0": "rcf05",
+                "MBOX2C1": "rf005",
+                "MBOX3C0": "rcf05",
+                "MBOX3C1": "rf005",
+                "MBOX4C0": "rcf05",
+                "MBOX4C1": "rf005",
+                "MBOX5C0": "rcf05",
+                "MBOX5C1": "rf005",
+                "MBOX6C0": "rcf05",
+                "MBOX6C1": "rf005",
+                "MBOX7C0": "rcf05",
+                "MBOX7C1": "rf005",
+                "MBOX8C0": "rcf05",
+                "MBOX8C1": "rf005",
+                "MBOX9C0": "rcf05",
+                "MBOX9C1": "rf005"
               }
             }
           ]
@@ -1169,7 +1169,7 @@
               "units": "FLOP",
               "formula": "(PMC0)",
               "events": {
-                "PMC0": "FP_FLOPS_RETIRED_FP64"
+                "PMC0": "r01c8"
               }
             },
             {
@@ -1177,7 +1177,7 @@
               "units": "FLOP",
               "formula": "(PMC1)",
               "events": {
-                "PMC1": "FP_FLOPS_RETIRED_FP32"
+                "PMC1": "r02c8"
               }
             },
             {
@@ -1185,9 +1185,9 @@
               "units": "FLOP",
               "formula": "((PMC3-(PMC1*4+PMC2)))",
               "events": {
-                "PMC1": "FP_ARITH_INST_RETIRED_128B_PACKED_SINGLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_SCALAR_SINGLE",
-                "PMC3": "FP_FLOPS_RETIRED_FP32"
+                "PMC1": "r04c7",
+                "PMC2": "r01c7",
+                "PMC3": "r02c8"
               }
             },
             {
@@ -1195,7 +1195,7 @@
               "units": "FLOP",
               "formula": "(PMC0*4.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE"
+                "PMC0": "r20c7"
               }
             },
             {
@@ -1203,9 +1203,9 @@
               "units": "FLOP",
               "formula": "(PMC0*2.0+PMC1+PMC2*4.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE",
-                "PMC1": "FP_ARITH_INST_RETIRED_SCALAR_DOUBLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE"
+                "PMC0": "r08c7",
+                "PMC1": "r02c7",
+                "PMC2": "r20c7"
               }
             },
             {
@@ -1213,7 +1213,7 @@
               "units": "FLOP",
               "formula": "(PMC2*4.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE"
+                "PMC2": "r20c7"
               }
             },
             {
@@ -1221,7 +1221,7 @@
               "units": "FLOP",
               "formula": "(PMC2)",
               "events": {
-                "PMC2": "FP_FLOPS_RETIRED_FP32"
+                "PMC2": "r02c8"
               }
             }
           ],
@@ -1231,30 +1231,30 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX0C2+MBOX1C0+MBOX1C2+MBOX2C0+MBOX2C2+MBOX3C0+MBOX3C2+MBOX4C0+MBOX4C2+MBOX5C0+MBOX5C2+MBOX6C0+MBOX6C2+MBOX7C0+MBOX7C2+MBOX8C0+MBOX8C2+MBOX9C0+MBOX9C2+MBOX10C0+MBOX10C2+MBOX11C0+MBOX11C2)*64.0",
               "events": {
-                "MBOX0C0": "CAS_COUNT_SCH0_RD",
-                "MBOX0C2": "CAS_COUNT_SCH1_RD",
-                "MBOX10C0": "CAS_COUNT_SCH0_RD",
-                "MBOX10C2": "CAS_COUNT_SCH1_RD",
-                "MBOX11C0": "CAS_COUNT_SCH0_RD",
-                "MBOX11C2": "CAS_COUNT_SCH1_RD",
-                "MBOX1C0": "CAS_COUNT_SCH0_RD",
-                "MBOX1C2": "CAS_COUNT_SCH1_RD",
-                "MBOX2C0": "CAS_COUNT_SCH0_RD",
-                "MBOX2C2": "CAS_COUNT_SCH1_RD",
-                "MBOX3C0": "CAS_COUNT_SCH0_RD",
-                "MBOX3C2": "CAS_COUNT_SCH1_RD",
-                "MBOX4C0": "CAS_COUNT_SCH0_RD",
-                "MBOX4C2": "CAS_COUNT_SCH1_RD",
-                "MBOX5C0": "CAS_COUNT_SCH0_RD",
-                "MBOX5C2": "CAS_COUNT_SCH1_RD",
-                "MBOX6C0": "CAS_COUNT_SCH0_RD",
-                "MBOX6C2": "CAS_COUNT_SCH1_RD",
-                "MBOX7C0": "CAS_COUNT_SCH0_RD",
-                "MBOX7C2": "CAS_COUNT_SCH1_RD",
-                "MBOX8C0": "CAS_COUNT_SCH0_RD",
-                "MBOX8C2": "CAS_COUNT_SCH1_RD",
-                "MBOX9C0": "CAS_COUNT_SCH0_RD",
-                "MBOX9C2": "CAS_COUNT_SCH1_RD"
+                "MBOX0C0": "rcf05",
+                "MBOX0C2": "rcf06",
+                "MBOX10C0": "rcf05",
+                "MBOX10C2": "rcf06",
+                "MBOX11C0": "rcf05",
+                "MBOX11C2": "rcf06",
+                "MBOX1C0": "rcf05",
+                "MBOX1C2": "rcf06",
+                "MBOX2C0": "rcf05",
+                "MBOX2C2": "rcf06",
+                "MBOX3C0": "rcf05",
+                "MBOX3C2": "rcf06",
+                "MBOX4C0": "rcf05",
+                "MBOX4C2": "rcf06",
+                "MBOX5C0": "rcf05",
+                "MBOX5C2": "rcf06",
+                "MBOX6C0": "rcf05",
+                "MBOX6C2": "rcf06",
+                "MBOX7C0": "rcf05",
+                "MBOX7C2": "rcf06",
+                "MBOX8C0": "rcf05",
+                "MBOX8C2": "rcf06",
+                "MBOX9C0": "rcf05",
+                "MBOX9C2": "rcf06"
               }
             },
             {
@@ -1262,30 +1262,30 @@
               "units": "Bytes",
               "formula": "(MBOX0C1+MBOX0C3+MBOX1C1+MBOX1C3+MBOX2C1+MBOX2C3+MBOX3C1+MBOX3C3+MBOX4C1+MBOX4C3+MBOX5C1+MBOX5C3+MBOX6C1+MBOX6C3+MBOX7C1+MBOX7C3+MBOX8C1+MBOX8C3+MBOX9C1+MBOX9C3+MBOX10C1+MBOX10C3+MBOX11C1+MBOX11C3)*64.0",
               "events": {
-                "MBOX0C1": "CAS_COUNT_SCH0_WR",
-                "MBOX0C3": "CAS_COUNT_SCH1_WR",
-                "MBOX10C1": "CAS_COUNT_SCH0_WR",
-                "MBOX10C3": "CAS_COUNT_SCH1_WR",
-                "MBOX11C1": "CAS_COUNT_SCH0_WR",
-                "MBOX11C3": "CAS_COUNT_SCH1_WR",
-                "MBOX1C1": "CAS_COUNT_SCH0_WR",
-                "MBOX1C3": "CAS_COUNT_SCH1_WR",
-                "MBOX2C1": "CAS_COUNT_SCH0_WR",
-                "MBOX2C3": "CAS_COUNT_SCH1_WR",
-                "MBOX3C1": "CAS_COUNT_SCH0_WR",
-                "MBOX3C3": "CAS_COUNT_SCH1_WR",
-                "MBOX4C1": "CAS_COUNT_SCH0_WR",
-                "MBOX4C3": "CAS_COUNT_SCH1_WR",
-                "MBOX5C1": "CAS_COUNT_SCH0_WR",
-                "MBOX5C3": "CAS_COUNT_SCH1_WR",
-                "MBOX6C1": "CAS_COUNT_SCH0_WR",
-                "MBOX6C3": "CAS_COUNT_SCH1_WR",
-                "MBOX7C1": "CAS_COUNT_SCH0_WR",
-                "MBOX7C3": "CAS_COUNT_SCH1_WR",
-                "MBOX8C1": "CAS_COUNT_SCH0_WR",
-                "MBOX8C3": "CAS_COUNT_SCH1_WR",
-                "MBOX9C1": "CAS_COUNT_SCH0_WR",
-                "MBOX9C3": "CAS_COUNT_SCH1_WR"
+                "MBOX0C1": "rf005",
+                "MBOX0C3": "rf006",
+                "MBOX10C1": "rf005",
+                "MBOX10C3": "rf006",
+                "MBOX11C1": "rf005",
+                "MBOX11C3": "rf006",
+                "MBOX1C1": "rf005",
+                "MBOX1C3": "rf006",
+                "MBOX2C1": "rf005",
+                "MBOX2C3": "rf006",
+                "MBOX3C1": "rf005",
+                "MBOX3C3": "rf006",
+                "MBOX4C1": "rf005",
+                "MBOX4C3": "rf006",
+                "MBOX5C1": "rf005",
+                "MBOX5C3": "rf006",
+                "MBOX6C1": "rf005",
+                "MBOX6C3": "rf006",
+                "MBOX7C1": "rf005",
+                "MBOX7C3": "rf006",
+                "MBOX8C1": "rf005",
+                "MBOX8C3": "rf006",
+                "MBOX9C1": "rf005",
+                "MBOX9C3": "rf006"
               }
             },
             {
@@ -1293,54 +1293,54 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX0C2+MBOX1C0+MBOX1C2+MBOX2C0+MBOX2C2+MBOX3C0+MBOX3C2+MBOX4C0+MBOX4C2+MBOX5C0+MBOX5C2+MBOX6C0+MBOX6C2+MBOX7C0+MBOX7C2+MBOX8C0+MBOX8C2+MBOX9C0+MBOX9C2+MBOX10C0+MBOX10C2+MBOX11C0+MBOX11C2+MBOX0C1+MBOX0C3+MBOX1C1+MBOX1C3+MBOX2C1+MBOX2C3+MBOX3C1+MBOX3C3+MBOX4C1+MBOX4C3+MBOX5C1+MBOX5C3+MBOX6C1+MBOX6C3+MBOX7C1+MBOX7C3+MBOX8C1+MBOX8C3+MBOX9C1+MBOX9C3+MBOX10C1+MBOX10C3+MBOX11C1+MBOX11C3)*64.0",
               "events": {
-                "MBOX0C0": "CAS_COUNT_SCH0_RD",
-                "MBOX0C1": "CAS_COUNT_SCH0_WR",
-                "MBOX0C2": "CAS_COUNT_SCH1_RD",
-                "MBOX0C3": "CAS_COUNT_SCH1_WR",
-                "MBOX10C0": "CAS_COUNT_SCH0_RD",
-                "MBOX10C1": "CAS_COUNT_SCH0_WR",
-                "MBOX10C2": "CAS_COUNT_SCH1_RD",
-                "MBOX10C3": "CAS_COUNT_SCH1_WR",
-                "MBOX11C0": "CAS_COUNT_SCH0_RD",
-                "MBOX11C1": "CAS_COUNT_SCH0_WR",
-                "MBOX11C2": "CAS_COUNT_SCH1_RD",
-                "MBOX11C3": "CAS_COUNT_SCH1_WR",
-                "MBOX1C0": "CAS_COUNT_SCH0_RD",
-                "MBOX1C1": "CAS_COUNT_SCH0_WR",
-                "MBOX1C2": "CAS_COUNT_SCH1_RD",
-                "MBOX1C3": "CAS_COUNT_SCH1_WR",
-                "MBOX2C0": "CAS_COUNT_SCH0_RD",
-                "MBOX2C1": "CAS_COUNT_SCH0_WR",
-                "MBOX2C2": "CAS_COUNT_SCH1_RD",
-                "MBOX2C3": "CAS_COUNT_SCH1_WR",
-                "MBOX3C0": "CAS_COUNT_SCH0_RD",
-                "MBOX3C1": "CAS_COUNT_SCH0_WR",
-                "MBOX3C2": "CAS_COUNT_SCH1_RD",
-                "MBOX3C3": "CAS_COUNT_SCH1_WR",
-                "MBOX4C0": "CAS_COUNT_SCH0_RD",
-                "MBOX4C1": "CAS_COUNT_SCH0_WR",
-                "MBOX4C2": "CAS_COUNT_SCH1_RD",
-                "MBOX4C3": "CAS_COUNT_SCH1_WR",
-                "MBOX5C0": "CAS_COUNT_SCH0_RD",
-                "MBOX5C1": "CAS_COUNT_SCH0_WR",
-                "MBOX5C2": "CAS_COUNT_SCH1_RD",
-                "MBOX5C3": "CAS_COUNT_SCH1_WR",
-                "MBOX6C0": "CAS_COUNT_SCH0_RD",
-                "MBOX6C1": "CAS_COUNT_SCH0_WR",
-                "MBOX6C2": "CAS_COUNT_SCH1_RD",
-                "MBOX6C3": "CAS_COUNT_SCH1_WR",
-                "MBOX7C0": "CAS_COUNT_SCH0_RD",
-                "MBOX7C1": "CAS_COUNT_SCH0_WR",
-                "MBOX7C2": "CAS_COUNT_SCH1_RD",
-                "MBOX7C3": "CAS_COUNT_SCH1_WR",
-                "MBOX8C0": "CAS_COUNT_SCH0_RD",
-                "MBOX8C1": "CAS_COUNT_SCH0_WR",
-                "MBOX8C2": "CAS_COUNT_SCH1_RD",
-                "MBOX8C3": "CAS_COUNT_SCH1_WR",
-                "MBOX9C0": "CAS_COUNT_SCH0_RD",
-                "MBOX9C1": "CAS_COUNT_SCH0_WR",
-                "MBOX9C2": "CAS_COUNT_SCH1_RD",
-                "MBOX9C3": "CAS_COUNT_SCH1_WR"
+                "MBOX0C0": "rcf05",
+                "MBOX0C1": "rf005",
+                "MBOX0C2": "rcf06",
+                "MBOX0C3": "rf006",
+                "MBOX10C0": "rcf05",
+                "MBOX10C1": "rf005",
+                "MBOX10C2": "rcf06",
+                "MBOX10C3": "rf006",
+                "MBOX11C0": "rcf05",
+                "MBOX11C1": "rf005",
+                "MBOX11C2": "rcf06",
+                "MBOX11C3": "rf006",
+                "MBOX1C0": "rcf05",
+                "MBOX1C1": "rf005",
+                "MBOX1C2": "rcf06",
+                "MBOX1C3": "rf006",
+                "MBOX2C0": "rcf05",
+                "MBOX2C1": "rf005",
+                "MBOX2C2": "rcf06",
+                "MBOX2C3": "rf006",
+                "MBOX3C0": "rcf05",
+                "MBOX3C1": "rf005",
+                "MBOX3C2": "rcf06",
+                "MBOX3C3": "rf006",
+                "MBOX4C0": "rcf05",
+                "MBOX4C1": "rf005",
+                "MBOX4C2": "rcf06",
+                "MBOX4C3": "rf006",
+                "MBOX5C0": "rcf05",
+                "MBOX5C1": "rf005",
+                "MBOX5C2": "rcf06",
+                "MBOX5C3": "rf006",
+                "MBOX6C0": "rcf05",
+                "MBOX6C1": "rf005",
+                "MBOX6C2": "rcf06",
+                "MBOX6C3": "rf006",
+                "MBOX7C0": "rcf05",
+                "MBOX7C1": "rf005",
+                "MBOX7C2": "rcf06",
+                "MBOX7C3": "rf006",
+                "MBOX8C0": "rcf05",
+                "MBOX8C1": "rf005",
+                "MBOX8C2": "rcf06",
+                "MBOX8C3": "rf006",
+                "MBOX9C0": "rcf05",
+                "MBOX9C1": "rf005",
+                "MBOX9C2": "rcf06",
+                "MBOX9C3": "rf006"
               }
             }
           ]
@@ -1369,8 +1369,8 @@
               "units": "FLOP",
               "formula": "(PMC0*8.0+PMC2*16.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC0": "r20c7",
+                "PMC2": "r80c7"
               }
             },
             {
@@ -1378,8 +1378,8 @@
               "units": "FLOP",
               "formula": "(PMC1*4.0+PMC3*8.0)",
               "events": {
-                "PMC1": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC1": "r10c7",
+                "PMC3": "r40c7"
               }
             },
             {
@@ -1387,10 +1387,10 @@
               "units": "FLOP",
               "formula": "(PMC0*2.0+PMC1+PMC2*4.0+PMC3*8.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE",
-                "PMC1": "FP_ARITH_INST_RETIRED_SCALAR_DOUBLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC0": "r04c7",
+                "PMC1": "r01c7",
+                "PMC2": "r10c7",
+                "PMC3": "r40c7"
               }
             },
             {
@@ -1398,8 +1398,8 @@
               "units": "FLOP",
               "formula": "(PMC2*4.0+PMC3*8.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC2": "r10c7",
+                "PMC3": "r40c7"
               }
             },
             {
@@ -1407,7 +1407,7 @@
               "units": "FLOP",
               "formula": "(PMC3*8.0)",
               "events": {
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC3": "r40c7"
               }
             },
             {
@@ -1415,10 +1415,10 @@
               "units": "FLOP",
               "formula": "(PMC0*4.0+PMC1+PMC2*8.0+PMC3*16.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_128B_PACKED_SINGLE",
-                "PMC1": "FP_ARITH_INST_RETIRED_SCALAR_SINGLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC0": "r08c7",
+                "PMC1": "r02c7",
+                "PMC2": "r20c7",
+                "PMC3": "r80c7"
               }
             },
             {
@@ -1426,8 +1426,8 @@
               "units": "FLOP",
               "formula": "(PMC2*8.0+PMC3*16.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC2": "r20c7",
+                "PMC3": "r80c7"
               }
             },
             {
@@ -1435,7 +1435,7 @@
               "units": "FLOP",
               "formula": "(PMC3*16.0)",
               "events": {
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC3": "r80c7"
               }
             }
           ],
@@ -1473,8 +1473,8 @@
               "units": "FLOP",
               "formula": "(PMC0*2.0+PMC1)",
               "events": {
-                "PMC0": "SIMD_COMP_INST_RETIRED_PACKED_DOUBLE",
-                "PMC1": "SIMD_COMP_INST_RETIRED_SCALAR_DOUBLE"
+                "PMC0": "r04ca",
+                "PMC1": "r08ca"
               }
             },
             {
@@ -1482,8 +1482,8 @@
               "units": "FLOP",
               "formula": "(PMC0*4.0+PMC1)",
               "events": {
-                "PMC0": "SIMD_COMP_INST_RETIRED_PACKED_SINGLE",
-                "PMC1": "SIMD_COMP_INST_RETIRED_SCALAR_SINGLE"
+                "PMC0": "r01ca",
+                "PMC1": "r02ca"
               }
             },
             {
@@ -1491,7 +1491,7 @@
               "units": "FLOP",
               "formula": "PMC0",
               "events": {
-                "PMC0": "X87_COMP_OPS_EXE_ANY_AR"
+                "PMC0": "r8110"
               }
             }
           ],
@@ -1501,7 +1501,7 @@
               "units": "Bytes",
               "formula": "PMC0*64.0",
               "events": {
-                "PMC0": "BUS_TRANS_MEM_THIS_CORE_THIS_A"
+                "PMC0": "r406f"
               }
             }
           ]
@@ -1530,7 +1530,7 @@
               "units": "FLOP",
               "formula": "(PMC0*8.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE"
+                "PMC0": "r20c7"
               }
             },
             {
@@ -1538,7 +1538,7 @@
               "units": "FLOP",
               "formula": "(PMC1*4.0)",
               "events": {
-                "PMC1": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE"
+                "PMC1": "r10c7"
               }
             },
             {
@@ -1546,9 +1546,9 @@
               "units": "FLOP",
               "formula": "(PMC0*2.0+PMC1+PMC2*4.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE",
-                "PMC1": "FP_ARITH_INST_RETIRED_SCALAR_DOUBLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE"
+                "PMC0": "r04c7",
+                "PMC1": "r01c7",
+                "PMC2": "r10c7"
               }
             },
             {
@@ -1556,7 +1556,7 @@
               "units": "FLOP",
               "formula": "(PMC2*4.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE"
+                "PMC2": "r10c7"
               }
             },
             {
@@ -1564,9 +1564,9 @@
               "units": "FLOP",
               "formula": "(PMC0*4.0+PMC1+PMC2*8.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_128B_PACKED_SINGLE",
-                "PMC1": "FP_ARITH_INST_RETIRED_SCALAR_SINGLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE"
+                "PMC0": "r08c7",
+                "PMC1": "r02c7",
+                "PMC2": "r20c7"
               }
             },
             {
@@ -1574,7 +1574,7 @@
               "units": "FLOP",
               "formula": "(PMC2*8.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE"
+                "PMC2": "r20c7"
               }
             }
           ],
@@ -1600,7 +1600,7 @@
               "units": "FLOP",
               "formula": "(PMC0*8.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE"
+                "PMC0": "r20c7"
               }
             },
             {
@@ -1608,7 +1608,7 @@
               "units": "FLOP",
               "formula": "(PMC1*4.0)",
               "events": {
-                "PMC1": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE"
+                "PMC1": "r10c7"
               }
             },
             {
@@ -1616,9 +1616,9 @@
               "units": "FLOP",
               "formula": "(PMC0*2.0+PMC1+PMC2*4.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE",
-                "PMC1": "FP_ARITH_INST_RETIRED_SCALAR_DOUBLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE"
+                "PMC0": "r04c7",
+                "PMC1": "r01c7",
+                "PMC2": "r10c7"
               }
             },
             {
@@ -1626,7 +1626,7 @@
               "units": "FLOP",
               "formula": "(PMC2*4.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE"
+                "PMC2": "r10c7"
               }
             },
             {
@@ -1634,9 +1634,9 @@
               "units": "FLOP",
               "formula": "(PMC0*4.0+PMC1+PMC2*8.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_128B_PACKED_SINGLE",
-                "PMC1": "FP_ARITH_INST_RETIRED_SCALAR_SINGLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE"
+                "PMC0": "r08c7",
+                "PMC1": "r02c7",
+                "PMC2": "r20c7"
               }
             },
             {
@@ -1644,7 +1644,7 @@
               "units": "FLOP",
               "formula": "(PMC2*8.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE"
+                "PMC2": "r20c7"
               }
             }
           ],
@@ -1654,14 +1654,14 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0+MBOX2C0+MBOX3C0+MBOX4C0+MBOX5C0+MBOX6C0+MBOX7C0)*64.0",
               "events": {
-                "MBOX0C0": "CAS_COUNT_RD",
-                "MBOX1C0": "CAS_COUNT_RD",
-                "MBOX2C0": "CAS_COUNT_RD",
-                "MBOX3C0": "CAS_COUNT_RD",
-                "MBOX4C0": "CAS_COUNT_RD",
-                "MBOX5C0": "CAS_COUNT_RD",
-                "MBOX6C0": "CAS_COUNT_RD",
-                "MBOX7C0": "CAS_COUNT_RD"
+                "MBOX0C0": "r0304",
+                "MBOX1C0": "r0304",
+                "MBOX2C0": "r0304",
+                "MBOX3C0": "r0304",
+                "MBOX4C0": "r0304",
+                "MBOX5C0": "r0304",
+                "MBOX6C0": "r0304",
+                "MBOX7C0": "r0304"
               }
             },
             {
@@ -1669,14 +1669,14 @@
               "units": "Bytes",
               "formula": "(MBOX0C1+MBOX1C1+MBOX2C1+MBOX3C1+MBOX4C1+MBOX5C1+MBOX6C1+MBOX7C1)*64.0",
               "events": {
-                "MBOX0C1": "CAS_COUNT_WR",
-                "MBOX1C1": "CAS_COUNT_WR",
-                "MBOX2C1": "CAS_COUNT_WR",
-                "MBOX3C1": "CAS_COUNT_WR",
-                "MBOX4C1": "CAS_COUNT_WR",
-                "MBOX5C1": "CAS_COUNT_WR",
-                "MBOX6C1": "CAS_COUNT_WR",
-                "MBOX7C1": "CAS_COUNT_WR"
+                "MBOX0C1": "r0c04",
+                "MBOX1C1": "r0c04",
+                "MBOX2C1": "r0c04",
+                "MBOX3C1": "r0c04",
+                "MBOX4C1": "r0c04",
+                "MBOX5C1": "r0c04",
+                "MBOX6C1": "r0c04",
+                "MBOX7C1": "r0c04"
               }
             },
             {
@@ -1684,22 +1684,22 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0+MBOX2C0+MBOX3C0+MBOX4C0+MBOX5C0+MBOX6C0+MBOX7C0+MBOX0C1+MBOX1C1+MBOX2C1+MBOX3C1+MBOX4C1+MBOX5C1+MBOX6C1+MBOX7C1)*64.0",
               "events": {
-                "MBOX0C0": "CAS_COUNT_RD",
-                "MBOX0C1": "CAS_COUNT_WR",
-                "MBOX1C0": "CAS_COUNT_RD",
-                "MBOX1C1": "CAS_COUNT_WR",
-                "MBOX2C0": "CAS_COUNT_RD",
-                "MBOX2C1": "CAS_COUNT_WR",
-                "MBOX3C0": "CAS_COUNT_RD",
-                "MBOX3C1": "CAS_COUNT_WR",
-                "MBOX4C0": "CAS_COUNT_RD",
-                "MBOX4C1": "CAS_COUNT_WR",
-                "MBOX5C0": "CAS_COUNT_RD",
-                "MBOX5C1": "CAS_COUNT_WR",
-                "MBOX6C0": "CAS_COUNT_RD",
-                "MBOX6C1": "CAS_COUNT_WR",
-                "MBOX7C0": "CAS_COUNT_RD",
-                "MBOX7C1": "CAS_COUNT_WR"
+                "MBOX0C0": "r0304",
+                "MBOX0C1": "r0c04",
+                "MBOX1C0": "r0304",
+                "MBOX1C1": "r0c04",
+                "MBOX2C0": "r0304",
+                "MBOX2C1": "r0c04",
+                "MBOX3C0": "r0304",
+                "MBOX3C1": "r0c04",
+                "MBOX4C0": "r0304",
+                "MBOX4C1": "r0c04",
+                "MBOX5C0": "r0304",
+                "MBOX5C1": "r0c04",
+                "MBOX6C0": "r0304",
+                "MBOX6C1": "r0c04",
+                "MBOX7C0": "r0304",
+                "MBOX7C1": "r0c04"
               }
             }
           ]
@@ -1724,7 +1724,7 @@
               "units": "FLOP",
               "formula": "(PMC0*8.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE"
+                "PMC0": "r20c7"
               }
             },
             {
@@ -1732,7 +1732,7 @@
               "units": "FLOP",
               "formula": "(PMC1*4.0)",
               "events": {
-                "PMC1": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE"
+                "PMC1": "r10c7"
               }
             },
             {
@@ -1740,9 +1740,9 @@
               "units": "FLOP",
               "formula": "(PMC0*2.0+PMC1+PMC2*4.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE",
-                "PMC1": "FP_ARITH_INST_RETIRED_SCALAR_DOUBLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE"
+                "PMC0": "r04c7",
+                "PMC1": "r01c7",
+                "PMC2": "r10c7"
               }
             },
             {
@@ -1750,7 +1750,7 @@
               "units": "FLOP",
               "formula": "(PMC2*4.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE"
+                "PMC2": "r10c7"
               }
             },
             {
@@ -1758,9 +1758,9 @@
               "units": "FLOP",
               "formula": "(PMC0*4.0+PMC1+PMC2*8.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_128B_PACKED_SINGLE",
-                "PMC1": "FP_ARITH_INST_RETIRED_SCALAR_SINGLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE"
+                "PMC0": "r08c7",
+                "PMC1": "r02c7",
+                "PMC2": "r20c7"
               }
             },
             {
@@ -1768,7 +1768,7 @@
               "units": "FLOP",
               "formula": "(PMC2*8.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE"
+                "PMC2": "r20c7"
               }
             }
           ],
@@ -1778,14 +1778,14 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0+MBOX2C0+MBOX3C0+MBOX4C0+MBOX5C0+MBOX6C0+MBOX7C0)*64.0",
               "events": {
-                "MBOX0C0": "CAS_COUNT_RD",
-                "MBOX1C0": "CAS_COUNT_RD",
-                "MBOX2C0": "CAS_COUNT_RD",
-                "MBOX3C0": "CAS_COUNT_RD",
-                "MBOX4C0": "CAS_COUNT_RD",
-                "MBOX5C0": "CAS_COUNT_RD",
-                "MBOX6C0": "CAS_COUNT_RD",
-                "MBOX7C0": "CAS_COUNT_RD"
+                "MBOX0C0": "r0304",
+                "MBOX1C0": "r0304",
+                "MBOX2C0": "r0304",
+                "MBOX3C0": "r0304",
+                "MBOX4C0": "r0304",
+                "MBOX5C0": "r0304",
+                "MBOX6C0": "r0304",
+                "MBOX7C0": "r0304"
               }
             },
             {
@@ -1793,14 +1793,14 @@
               "units": "Bytes",
               "formula": "(MBOX0C1+MBOX1C1+MBOX2C1+MBOX3C1+MBOX4C1+MBOX5C1+MBOX6C1+MBOX7C1)*64.0",
               "events": {
-                "MBOX0C1": "CAS_COUNT_WR",
-                "MBOX1C1": "CAS_COUNT_WR",
-                "MBOX2C1": "CAS_COUNT_WR",
-                "MBOX3C1": "CAS_COUNT_WR",
-                "MBOX4C1": "CAS_COUNT_WR",
-                "MBOX5C1": "CAS_COUNT_WR",
-                "MBOX6C1": "CAS_COUNT_WR",
-                "MBOX7C1": "CAS_COUNT_WR"
+                "MBOX0C1": "r0c04",
+                "MBOX1C1": "r0c04",
+                "MBOX2C1": "r0c04",
+                "MBOX3C1": "r0c04",
+                "MBOX4C1": "r0c04",
+                "MBOX5C1": "r0c04",
+                "MBOX6C1": "r0c04",
+                "MBOX7C1": "r0c04"
               }
             },
             {
@@ -1808,22 +1808,22 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0+MBOX2C0+MBOX3C0+MBOX4C0+MBOX5C0+MBOX6C0+MBOX7C0+MBOX0C1+MBOX1C1+MBOX2C1+MBOX3C1+MBOX4C1+MBOX5C1+MBOX6C1+MBOX7C1)*64.0",
               "events": {
-                "MBOX0C0": "CAS_COUNT_RD",
-                "MBOX0C1": "CAS_COUNT_WR",
-                "MBOX1C0": "CAS_COUNT_RD",
-                "MBOX1C1": "CAS_COUNT_WR",
-                "MBOX2C0": "CAS_COUNT_RD",
-                "MBOX2C1": "CAS_COUNT_WR",
-                "MBOX3C0": "CAS_COUNT_RD",
-                "MBOX3C1": "CAS_COUNT_WR",
-                "MBOX4C0": "CAS_COUNT_RD",
-                "MBOX4C1": "CAS_COUNT_WR",
-                "MBOX5C0": "CAS_COUNT_RD",
-                "MBOX5C1": "CAS_COUNT_WR",
-                "MBOX6C0": "CAS_COUNT_RD",
-                "MBOX6C1": "CAS_COUNT_WR",
-                "MBOX7C0": "CAS_COUNT_RD",
-                "MBOX7C1": "CAS_COUNT_WR"
+                "MBOX0C0": "r0304",
+                "MBOX0C1": "r0c04",
+                "MBOX1C0": "r0304",
+                "MBOX1C1": "r0c04",
+                "MBOX2C0": "r0304",
+                "MBOX2C1": "r0c04",
+                "MBOX3C0": "r0304",
+                "MBOX3C1": "r0c04",
+                "MBOX4C0": "r0304",
+                "MBOX4C1": "r0c04",
+                "MBOX5C0": "r0304",
+                "MBOX5C1": "r0c04",
+                "MBOX6C0": "r0304",
+                "MBOX6C1": "r0c04",
+                "MBOX7C0": "r0304",
+                "MBOX7C1": "r0c04"
               }
             }
           ]
@@ -1860,8 +1860,8 @@
               "units": "FLOP",
               "formula": "(PMC0*2.0+PMC1)",
               "events": {
-                "PMC0": "SIMD_COMP_INST_RETIRED_PACKED_DOUBLE",
-                "PMC1": "SIMD_COMP_INST_RETIRED_SCALAR_DOUBLE"
+                "PMC0": "r04ca",
+                "PMC1": "r08ca"
               }
             },
             {
@@ -1869,8 +1869,8 @@
               "units": "FLOP",
               "formula": "(PMC0*4.0+PMC1)",
               "events": {
-                "PMC0": "SIMD_COMP_INST_RETIRED_PACKED_SINGLE",
-                "PMC1": "SIMD_COMP_INST_RETIRED_SCALAR_SINGLE"
+                "PMC0": "r01ca",
+                "PMC1": "r02ca"
               }
             },
             {
@@ -1878,7 +1878,7 @@
               "units": "FLOP",
               "formula": "PMC0",
               "events": {
-                "PMC0": "X87_OPS_RETIRED_ANY"
+                "PMC0": "rfec1"
               }
             }
           ],
@@ -1888,8 +1888,8 @@
               "units": "Bytes",
               "formula": "(PMC0+PMC1)*64.0",
               "events": {
-                "PMC0": "BUS_TRANS_MEM_THIS_CORE_THIS_A",
-                "PMC1": "BUS_TRANS_WB_THIS_CORE_ALL_A"
+                "PMC0": "r406f",
+                "PMC1": "r6067"
               }
             }
           ]
@@ -1922,7 +1922,7 @@
               "units": "FLOP",
               "formula": "(PMC0*8.0)",
               "events": {
-                "PMC0": "AVX_INSTS_CALC"
+                "PMC0": "r04c6"
               }
             },
             {
@@ -1930,7 +1930,7 @@
               "units": "FLOP",
               "formula": "(PMC0*4.0)",
               "events": {
-                "PMC0": "AVX_INSTS_CALC"
+                "PMC0": "r04c6"
               }
             }
           ],
@@ -1940,7 +1940,7 @@
               "units": "Bytes",
               "formula": "MBOX0C1*64.0",
               "events": {
-                "MBOX0C1": "DRAM_READS"
+                "MBOX0C1": "r0101"
               }
             },
             {
@@ -1948,7 +1948,7 @@
               "units": "Bytes",
               "formula": "MBOX0C2*64.0",
               "events": {
-                "MBOX0C2": "DRAM_WRITES"
+                "MBOX0C2": "r0202"
               }
             },
             {
@@ -1956,8 +1956,8 @@
               "units": "Bytes",
               "formula": "(MBOX0C1+MBOX0C2)*64.0",
               "events": {
-                "MBOX0C1": "DRAM_READS",
-                "MBOX0C2": "DRAM_WRITES"
+                "MBOX0C1": "r0101",
+                "MBOX0C2": "r0202"
               }
             }
           ]
@@ -1982,7 +1982,7 @@
               "units": "FLOP",
               "formula": "(PMC0*8.0)",
               "events": {
-                "PMC0": "AVX_INSTS_CALC"
+                "PMC0": "r04c6"
               }
             },
             {
@@ -1990,7 +1990,7 @@
               "units": "FLOP",
               "formula": "(PMC0*4.0)",
               "events": {
-                "PMC0": "AVX_INSTS_CALC"
+                "PMC0": "r04c6"
               }
             }
           ],
@@ -2000,14 +2000,14 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0+MBOX2C0+MBOX3C0+MBOX4C0+MBOX5C0+MBOX6C0+MBOX7C0)*64.0",
               "events": {
-                "MBOX0C0": "CAS_COUNT_RD",
-                "MBOX1C0": "CAS_COUNT_RD",
-                "MBOX2C0": "CAS_COUNT_RD",
-                "MBOX3C0": "CAS_COUNT_RD",
-                "MBOX4C0": "CAS_COUNT_RD",
-                "MBOX5C0": "CAS_COUNT_RD",
-                "MBOX6C0": "CAS_COUNT_RD",
-                "MBOX7C0": "CAS_COUNT_RD"
+                "MBOX0C0": "r0304",
+                "MBOX1C0": "r0304",
+                "MBOX2C0": "r0304",
+                "MBOX3C0": "r0304",
+                "MBOX4C0": "r0304",
+                "MBOX5C0": "r0304",
+                "MBOX6C0": "r0304",
+                "MBOX7C0": "r0304"
               }
             },
             {
@@ -2015,14 +2015,14 @@
               "units": "Bytes",
               "formula": "(MBOX0C1+MBOX1C1+MBOX2C1+MBOX3C1+MBOX4C1+MBOX5C1+MBOX6C1+MBOX7C1)*64.0",
               "events": {
-                "MBOX0C1": "CAS_COUNT_WR",
-                "MBOX1C1": "CAS_COUNT_WR",
-                "MBOX2C1": "CAS_COUNT_WR",
-                "MBOX3C1": "CAS_COUNT_WR",
-                "MBOX4C1": "CAS_COUNT_WR",
-                "MBOX5C1": "CAS_COUNT_WR",
-                "MBOX6C1": "CAS_COUNT_WR",
-                "MBOX7C1": "CAS_COUNT_WR"
+                "MBOX0C1": "r0c04",
+                "MBOX1C1": "r0c04",
+                "MBOX2C1": "r0c04",
+                "MBOX3C1": "r0c04",
+                "MBOX4C1": "r0c04",
+                "MBOX5C1": "r0c04",
+                "MBOX6C1": "r0c04",
+                "MBOX7C1": "r0c04"
               }
             },
             {
@@ -2030,22 +2030,22 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0+MBOX2C0+MBOX3C0+MBOX4C0+MBOX5C0+MBOX6C0+MBOX7C0+MBOX0C1+MBOX1C1+MBOX2C1+MBOX3C1+MBOX4C1+MBOX5C1+MBOX6C1+MBOX7C1)*64.0",
               "events": {
-                "MBOX0C0": "CAS_COUNT_RD",
-                "MBOX0C1": "CAS_COUNT_WR",
-                "MBOX1C0": "CAS_COUNT_RD",
-                "MBOX1C1": "CAS_COUNT_WR",
-                "MBOX2C0": "CAS_COUNT_RD",
-                "MBOX2C1": "CAS_COUNT_WR",
-                "MBOX3C0": "CAS_COUNT_RD",
-                "MBOX3C1": "CAS_COUNT_WR",
-                "MBOX4C0": "CAS_COUNT_RD",
-                "MBOX4C1": "CAS_COUNT_WR",
-                "MBOX5C0": "CAS_COUNT_RD",
-                "MBOX5C1": "CAS_COUNT_WR",
-                "MBOX6C0": "CAS_COUNT_RD",
-                "MBOX6C1": "CAS_COUNT_WR",
-                "MBOX7C0": "CAS_COUNT_RD",
-                "MBOX7C1": "CAS_COUNT_WR"
+                "MBOX0C0": "r0304",
+                "MBOX0C1": "r0c04",
+                "MBOX1C0": "r0304",
+                "MBOX1C1": "r0c04",
+                "MBOX2C0": "r0304",
+                "MBOX2C1": "r0c04",
+                "MBOX3C0": "r0304",
+                "MBOX3C1": "r0c04",
+                "MBOX4C0": "r0304",
+                "MBOX4C1": "r0c04",
+                "MBOX5C0": "r0304",
+                "MBOX5C1": "r0c04",
+                "MBOX6C0": "r0304",
+                "MBOX6C1": "r0c04",
+                "MBOX7C0": "r0304",
+                "MBOX7C1": "r0c04"
               }
             }
           ]
@@ -2070,7 +2070,7 @@
               "units": "FLOP",
               "formula": "(PMC0*8.0)",
               "events": {
-                "PMC0": "SIMD_FP_256_PACKED_SINGLE"
+                "PMC0": "r0111"
               }
             },
             {
@@ -2078,7 +2078,7 @@
               "units": "FLOP",
               "formula": "(PMC1*4.0)",
               "events": {
-                "PMC1": "SIMD_FP_256_PACKED_DOUBLE"
+                "PMC1": "r0211"
               }
             },
             {
@@ -2086,9 +2086,9 @@
               "units": "FLOP",
               "formula": "(PMC0*2.0+PMC1+PMC2*4.0)",
               "events": {
-                "PMC0": "FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE",
-                "PMC1": "FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE",
-                "PMC2": "SIMD_FP_256_PACKED_DOUBLE"
+                "PMC0": "r1010",
+                "PMC1": "r8010",
+                "PMC2": "r0211"
               }
             },
             {
@@ -2096,7 +2096,7 @@
               "units": "FLOP",
               "formula": "(PMC2*4.0)",
               "events": {
-                "PMC2": "SIMD_FP_256_PACKED_DOUBLE"
+                "PMC2": "r0211"
               }
             },
             {
@@ -2104,9 +2104,9 @@
               "units": "FLOP",
               "formula": "(PMC0*4.0+PMC1+PMC2*8.0)",
               "events": {
-                "PMC0": "FP_COMP_OPS_EXE_SSE_FP_PACKED_SINGLE",
-                "PMC1": "FP_COMP_OPS_EXE_SSE_FP_SCALAR_SINGLE",
-                "PMC2": "SIMD_FP_256_PACKED_SINGLE"
+                "PMC0": "r4010",
+                "PMC1": "r2010",
+                "PMC2": "r0111"
               }
             },
             {
@@ -2114,7 +2114,7 @@
               "units": "FLOP",
               "formula": "(PMC2*8.0)",
               "events": {
-                "PMC2": "SIMD_FP_256_PACKED_SINGLE"
+                "PMC2": "r0111"
               }
             }
           ],
@@ -2140,7 +2140,7 @@
               "units": "FLOP",
               "formula": "(PMC0*8.0)",
               "events": {
-                "PMC0": "SIMD_FP_256_PACKED_SINGLE"
+                "PMC0": "r0111"
               }
             },
             {
@@ -2148,7 +2148,7 @@
               "units": "FLOP",
               "formula": "(PMC1*4.0)",
               "events": {
-                "PMC1": "SIMD_FP_256_PACKED_DOUBLE"
+                "PMC1": "r0211"
               }
             },
             {
@@ -2156,9 +2156,9 @@
               "units": "FLOP",
               "formula": "(PMC0*2.0+PMC1+PMC2*4.0)",
               "events": {
-                "PMC0": "FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE",
-                "PMC1": "FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE",
-                "PMC2": "SIMD_FP_256_PACKED_DOUBLE"
+                "PMC0": "r1010",
+                "PMC1": "r8010",
+                "PMC2": "r0211"
               }
             },
             {
@@ -2166,7 +2166,7 @@
               "units": "FLOP",
               "formula": "(PMC2*4.0)",
               "events": {
-                "PMC2": "SIMD_FP_256_PACKED_DOUBLE"
+                "PMC2": "r0211"
               }
             },
             {
@@ -2174,9 +2174,9 @@
               "units": "FLOP",
               "formula": "(PMC0*4.0+PMC1+PMC2*8.0)",
               "events": {
-                "PMC0": "FP_COMP_OPS_EXE_SSE_FP_PACKED_SINGLE",
-                "PMC1": "FP_COMP_OPS_EXE_SSE_FP_SCALAR_SINGLE",
-                "PMC2": "SIMD_FP_256_PACKED_SINGLE"
+                "PMC0": "r4010",
+                "PMC1": "r2010",
+                "PMC2": "r0111"
               }
             },
             {
@@ -2184,7 +2184,7 @@
               "units": "FLOP",
               "formula": "(PMC2*8.0)",
               "events": {
-                "PMC2": "SIMD_FP_256_PACKED_SINGLE"
+                "PMC2": "r0111"
               }
             }
           ],
@@ -2194,14 +2194,14 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0+MBOX2C0+MBOX3C0+MBOX4C0+MBOX5C0+MBOX6C0+MBOX7C0)*64.0",
               "events": {
-                "MBOX0C0": "CAS_COUNT_RD",
-                "MBOX1C0": "CAS_COUNT_RD",
-                "MBOX2C0": "CAS_COUNT_RD",
-                "MBOX3C0": "CAS_COUNT_RD",
-                "MBOX4C0": "CAS_COUNT_RD",
-                "MBOX5C0": "CAS_COUNT_RD",
-                "MBOX6C0": "CAS_COUNT_RD",
-                "MBOX7C0": "CAS_COUNT_RD"
+                "MBOX0C0": "r0304",
+                "MBOX1C0": "r0304",
+                "MBOX2C0": "r0304",
+                "MBOX3C0": "r0304",
+                "MBOX4C0": "r0304",
+                "MBOX5C0": "r0304",
+                "MBOX6C0": "r0304",
+                "MBOX7C0": "r0304"
               }
             },
             {
@@ -2209,14 +2209,14 @@
               "units": "Bytes",
               "formula": "(MBOX0C1+MBOX1C1+MBOX2C1+MBOX3C1+MBOX4C1+MBOX5C1+MBOX6C1+MBOX7C1)*64.0",
               "events": {
-                "MBOX0C1": "CAS_COUNT_WR",
-                "MBOX1C1": "CAS_COUNT_WR",
-                "MBOX2C1": "CAS_COUNT_WR",
-                "MBOX3C1": "CAS_COUNT_WR",
-                "MBOX4C1": "CAS_COUNT_WR",
-                "MBOX5C1": "CAS_COUNT_WR",
-                "MBOX6C1": "CAS_COUNT_WR",
-                "MBOX7C1": "CAS_COUNT_WR"
+                "MBOX0C1": "r0c04",
+                "MBOX1C1": "r0c04",
+                "MBOX2C1": "r0c04",
+                "MBOX3C1": "r0c04",
+                "MBOX4C1": "r0c04",
+                "MBOX5C1": "r0c04",
+                "MBOX6C1": "r0c04",
+                "MBOX7C1": "r0c04"
               }
             },
             {
@@ -2224,22 +2224,22 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0+MBOX2C0+MBOX3C0+MBOX4C0+MBOX5C0+MBOX6C0+MBOX7C0+MBOX0C1+MBOX1C1+MBOX2C1+MBOX3C1+MBOX4C1+MBOX5C1+MBOX6C1+MBOX7C1)*64.0",
               "events": {
-                "MBOX0C0": "CAS_COUNT_RD",
-                "MBOX0C1": "CAS_COUNT_WR",
-                "MBOX1C0": "CAS_COUNT_RD",
-                "MBOX1C1": "CAS_COUNT_WR",
-                "MBOX2C0": "CAS_COUNT_RD",
-                "MBOX2C1": "CAS_COUNT_WR",
-                "MBOX3C0": "CAS_COUNT_RD",
-                "MBOX3C1": "CAS_COUNT_WR",
-                "MBOX4C0": "CAS_COUNT_RD",
-                "MBOX4C1": "CAS_COUNT_WR",
-                "MBOX5C0": "CAS_COUNT_RD",
-                "MBOX5C1": "CAS_COUNT_WR",
-                "MBOX6C0": "CAS_COUNT_RD",
-                "MBOX6C1": "CAS_COUNT_WR",
-                "MBOX7C0": "CAS_COUNT_RD",
-                "MBOX7C1": "CAS_COUNT_WR"
+                "MBOX0C0": "r0304",
+                "MBOX0C1": "r0c04",
+                "MBOX1C0": "r0304",
+                "MBOX1C1": "r0c04",
+                "MBOX2C0": "r0304",
+                "MBOX2C1": "r0c04",
+                "MBOX3C0": "r0304",
+                "MBOX3C1": "r0c04",
+                "MBOX4C0": "r0304",
+                "MBOX4C1": "r0c04",
+                "MBOX5C0": "r0304",
+                "MBOX5C1": "r0c04",
+                "MBOX6C0": "r0304",
+                "MBOX6C1": "r0c04",
+                "MBOX7C0": "r0304",
+                "MBOX7C1": "r0c04"
               }
             }
           ]
@@ -2268,8 +2268,8 @@
               "units": "FLOP",
               "formula": "((PMC1*2.0)+PMC0)",
               "events": {
-                "PMC0": "UOPS_RETIRED_SCALAR_SIMD",
-                "PMC1": "UOPS_RETIRED_PACKED_SIMD"
+                "PMC0": "r20c2",
+                "PMC1": "r40c2"
               }
             },
             {
@@ -2277,8 +2277,8 @@
               "units": "FLOP",
               "formula": "((PMC1*4.0)+PMC0)",
               "events": {
-                "PMC0": "UOPS_RETIRED_SCALAR_SIMD",
-                "PMC1": "UOPS_RETIRED_PACKED_SIMD"
+                "PMC0": "r20c2",
+                "PMC1": "r40c2"
               }
             },
             {
@@ -2286,8 +2286,8 @@
               "units": "FLOP",
               "formula": "((PMC1*8.0)+PMC0)",
               "events": {
-                "PMC0": "UOPS_RETIRED_SCALAR_SIMD",
-                "PMC1": "UOPS_RETIRED_PACKED_SIMD"
+                "PMC0": "r20c2",
+                "PMC1": "r40c2"
               }
             },
             {
@@ -2295,8 +2295,8 @@
               "units": "FLOP",
               "formula": "(PMC1*4.0+PMC0)",
               "events": {
-                "PMC0": "UOPS_RETIRED_SCALAR_SIMD",
-                "PMC1": "UOPS_RETIRED_PACKED_SIMD"
+                "PMC0": "r20c2",
+                "PMC1": "r40c2"
               }
             },
             {
@@ -2304,8 +2304,8 @@
               "units": "FLOP",
               "formula": "(PMC1*8.0+PMC0)",
               "events": {
-                "PMC0": "UOPS_RETIRED_SCALAR_SIMD",
-                "PMC1": "UOPS_RETIRED_PACKED_SIMD"
+                "PMC0": "r20c2",
+                "PMC1": "r40c2"
               }
             },
             {
@@ -2313,8 +2313,8 @@
               "units": "FLOP",
               "formula": "(PMC1*16.0+PMC0)",
               "events": {
-                "PMC0": "UOPS_RETIRED_SCALAR_SIMD",
-                "PMC1": "UOPS_RETIRED_PACKED_SIMD"
+                "PMC0": "r20c2",
+                "PMC1": "r40c2"
               }
             }
           ],
@@ -2324,12 +2324,12 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0+MBOX2C0+MBOX4C0+MBOX5C0+MBOX6C0)*64.0",
               "events": {
-                "MBOX0C0": "MC_CAS_READS",
-                "MBOX1C0": "MC_CAS_READS",
-                "MBOX2C0": "MC_CAS_READS",
-                "MBOX4C0": "MC_CAS_READS",
-                "MBOX5C0": "MC_CAS_READS",
-                "MBOX6C0": "MC_CAS_READS"
+                "MBOX0C0": "r0103",
+                "MBOX1C0": "r0103",
+                "MBOX2C0": "r0103",
+                "MBOX4C0": "r0103",
+                "MBOX5C0": "r0103",
+                "MBOX6C0": "r0103"
               }
             },
             {
@@ -2337,12 +2337,12 @@
               "units": "Bytes",
               "formula": "(MBOX0C1+MBOX1C1+MBOX2C1+MBOX4C1+MBOX5C1+MBOX6C1)*64.0",
               "events": {
-                "MBOX0C1": "MC_CAS_WRITES",
-                "MBOX1C1": "MC_CAS_WRITES",
-                "MBOX2C1": "MC_CAS_WRITES",
-                "MBOX4C1": "MC_CAS_WRITES",
-                "MBOX5C1": "MC_CAS_WRITES",
-                "MBOX6C1": "MC_CAS_WRITES"
+                "MBOX0C1": "r0203",
+                "MBOX1C1": "r0203",
+                "MBOX2C1": "r0203",
+                "MBOX4C1": "r0203",
+                "MBOX5C1": "r0203",
+                "MBOX6C1": "r0203"
               }
             },
             {
@@ -2350,18 +2350,18 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0+MBOX2C0+MBOX4C0+MBOX5C0+MBOX6C0+MBOX0C1+MBOX1C1+MBOX2C1+MBOX4C1+MBOX5C1+MBOX6C1)*64.0",
               "events": {
-                "MBOX0C0": "MC_CAS_READS",
-                "MBOX0C1": "MC_CAS_WRITES",
-                "MBOX1C0": "MC_CAS_READS",
-                "MBOX1C1": "MC_CAS_WRITES",
-                "MBOX2C0": "MC_CAS_READS",
-                "MBOX2C1": "MC_CAS_WRITES",
-                "MBOX4C0": "MC_CAS_READS",
-                "MBOX4C1": "MC_CAS_WRITES",
-                "MBOX5C0": "MC_CAS_READS",
-                "MBOX5C1": "MC_CAS_WRITES",
-                "MBOX6C0": "MC_CAS_READS",
-                "MBOX6C1": "MC_CAS_WRITES"
+                "MBOX0C0": "r0103",
+                "MBOX0C1": "r0203",
+                "MBOX1C0": "r0103",
+                "MBOX1C1": "r0203",
+                "MBOX2C0": "r0103",
+                "MBOX2C1": "r0203",
+                "MBOX4C0": "r0103",
+                "MBOX4C1": "r0203",
+                "MBOX5C0": "r0103",
+                "MBOX5C1": "r0203",
+                "MBOX6C0": "r0103",
+                "MBOX6C1": "r0203"
               }
             }
           ]
@@ -2390,8 +2390,8 @@
               "units": "FLOP",
               "formula": "(PMC0*2.0+PMC1)",
               "events": {
-                "PMC0": "FP_COMP_OPS_EXE_SSE_FP_PACKED",
-                "PMC1": "FP_COMP_OPS_EXE_SSE_FP_SCALAR"
+                "PMC0": "r1010",
+                "PMC1": "r2010"
               }
             },
             {
@@ -2399,8 +2399,8 @@
               "units": "FLOP",
               "formula": "(PMC0*4.0+PMC1)",
               "events": {
-                "PMC0": "FP_COMP_OPS_EXE_SSE_FP_PACKED",
-                "PMC1": "FP_COMP_OPS_EXE_SSE_FP_SCALAR"
+                "PMC0": "r1010",
+                "PMC1": "r2010"
               }
             },
             {
@@ -2408,7 +2408,7 @@
               "units": "FLOP",
               "formula": "PMC0",
               "events": {
-                "PMC0": "INST_RETIRED_X87"
+                "PMC0": "r02c0"
               }
             }
           ],
@@ -2418,7 +2418,7 @@
               "units": "Bytes",
               "formula": "UPMC0*64.0",
               "events": {
-                "UPMC0": "UNC_QMC_NORMAL_READS_ANY"
+                "UPMC0": "r072c"
               }
             },
             {
@@ -2426,7 +2426,7 @@
               "units": "Bytes",
               "formula": "UPMC1*64.0",
               "events": {
-                "UPMC1": "UNC_QMC_WRITES_FULL_ANY"
+                "UPMC1": "r072f"
               }
             },
             {
@@ -2434,8 +2434,8 @@
               "units": "Bytes",
               "formula": "(UPMC0+UPMC1)*64.0",
               "events": {
-                "UPMC0": "UNC_QMC_NORMAL_READS_ANY",
-                "UPMC1": "UNC_QMC_WRITES_FULL_ANY"
+                "UPMC0": "r072c",
+                "UPMC1": "r072f"
               }
             },
             {
@@ -2443,7 +2443,7 @@
               "units": "Bytes",
               "formula": "UPMC2*64.0",
               "events": {
-                "UPMC2": "UNC_QHL_REQUESTS_REMOTE_READS"
+                "UPMC2": "r0420"
               }
             },
             {
@@ -2451,7 +2451,7 @@
               "units": "Bytes",
               "formula": "UPMC3*64.0",
               "events": {
-                "UPMC3": "UNC_QHL_REQUESTS_REMOTE_WRITES"
+                "UPMC3": "r0820"
               }
             },
             {
@@ -2459,8 +2459,8 @@
               "units": "Bytes",
               "formula": "(UPMC2+UPMC3)*64.0",
               "events": {
-                "UPMC2": "UNC_QHL_REQUESTS_REMOTE_READS",
-                "UPMC3": "UNC_QHL_REQUESTS_REMOTE_WRITES"
+                "UPMC2": "r0420",
+                "UPMC3": "r0820"
               }
             }
           ]
@@ -2485,8 +2485,8 @@
               "units": "FLOP",
               "formula": "(PMC0*2.0+PMC1)",
               "events": {
-                "PMC0": "FP_COMP_OPS_EXE_SSE_FP_PACKED",
-                "PMC1": "FP_COMP_OPS_EXE_SSE_FP_SCALAR"
+                "PMC0": "r1010",
+                "PMC1": "r2010"
               }
             },
             {
@@ -2494,8 +2494,8 @@
               "units": "FLOP",
               "formula": "(PMC0*4.0+PMC1)",
               "events": {
-                "PMC0": "FP_COMP_OPS_EXE_SSE_FP_PACKED",
-                "PMC1": "FP_COMP_OPS_EXE_SSE_FP_SCALAR"
+                "PMC0": "r1010",
+                "PMC1": "r2010"
               }
             },
             {
@@ -2503,7 +2503,7 @@
               "units": "FLOP",
               "formula": "PMC0",
               "events": {
-                "PMC0": "INST_RETIRED_X87"
+                "PMC0": "r02c0"
               }
             }
           ],
@@ -2513,8 +2513,8 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0)*64.0",
               "events": {
-                "MBOX0C0": "FVC_EV0_BBOX_CMDS_READS",
-                "MBOX1C0": "FVC_EV0_BBOX_CMDS_READS"
+                "MBOX0C0": "r050d",
+                "MBOX1C0": "r050d"
               }
             },
             {
@@ -2522,8 +2522,8 @@
               "units": "Bytes",
               "formula": "(MBOX0C1+MBOX1C1)*64.0",
               "events": {
-                "MBOX0C1": "DRAM_CMD_CAS_WR_OPN",
-                "MBOX1C1": "DRAM_CMD_CAS_WR_OPN"
+                "MBOX0C1": "r040a",
+                "MBOX1C1": "r040a"
               }
             },
             {
@@ -2531,10 +2531,10 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0+MBOX0C1+MBOX1C1)*64",
               "events": {
-                "MBOX0C0": "FVC_EV0_BBOX_CMDS_READS",
-                "MBOX0C1": "DRAM_CMD_CAS_WR_OPN",
-                "MBOX1C0": "FVC_EV0_BBOX_CMDS_READS",
-                "MBOX1C1": "DRAM_CMD_CAS_WR_OPN"
+                "MBOX0C0": "r050d",
+                "MBOX0C1": "r040a",
+                "MBOX1C0": "r050d",
+                "MBOX1C1": "r040a"
               }
             }
           ]
@@ -2567,8 +2567,8 @@
               "units": "FLOP",
               "formula": "(PMC0*2.0+PMC1)",
               "events": {
-                "PMC0": "EMON_SSE_SSE2_COMP_INST_RETIRED_PACKED_DP",
-                "PMC1": "EMON_SSE_SSE2_COMP_INST_RETIRED_SCALAR_DP"
+                "PMC0": "r02d9",
+                "PMC1": "r03d9"
               }
             },
             {
@@ -2576,7 +2576,7 @@
               "units": "FLOP",
               "formula": "(PMC0)",
               "events": {
-                "PMC0": "EMON_SSE_SSE2_COMP_INST_RETIRED_ALL_SP"
+                "PMC0": "r00d9"
               }
             }
           ],
@@ -2602,7 +2602,7 @@
               "units": "FLOP",
               "formula": "(PMC0*8.0)",
               "events": {
-                "PMC0": "SIMD_FP_256_PACKED_SINGLE"
+                "PMC0": "r0111"
               }
             },
             {
@@ -2610,7 +2610,7 @@
               "units": "FLOP",
               "formula": "(PMC1*4.0)",
               "events": {
-                "PMC1": "SIMD_FP_256_PACKED_DOUBLE"
+                "PMC1": "r0211"
               }
             },
             {
@@ -2618,9 +2618,9 @@
               "units": "FLOP",
               "formula": "(PMC0*2.0+PMC1+PMC2*4.0)",
               "events": {
-                "PMC0": "FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE",
-                "PMC1": "FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE",
-                "PMC2": "SIMD_FP_256_PACKED_DOUBLE"
+                "PMC0": "r1010",
+                "PMC1": "r8010",
+                "PMC2": "r0211"
               }
             },
             {
@@ -2628,7 +2628,7 @@
               "units": "FLOP",
               "formula": "(PMC2*4.0)",
               "events": {
-                "PMC2": "SIMD_FP_256_PACKED_DOUBLE"
+                "PMC2": "r0211"
               }
             },
             {
@@ -2636,9 +2636,9 @@
               "units": "FLOP",
               "formula": "(PMC0*4.0+PMC1+PMC2*8.0)",
               "events": {
-                "PMC0": "FP_COMP_OPS_EXE_SSE_FP_PACKED_SINGLE",
-                "PMC1": "FP_COMP_OPS_EXE_SSE_FP_SCALAR_SINGLE",
-                "PMC2": "SIMD_FP_256_PACKED_SINGLE"
+                "PMC0": "r4010",
+                "PMC1": "r2010",
+                "PMC2": "r0111"
               }
             },
             {
@@ -2646,7 +2646,7 @@
               "units": "FLOP",
               "formula": "(PMC2*8.0)",
               "events": {
-                "PMC2": "SIMD_FP_256_PACKED_SINGLE"
+                "PMC2": "r0111"
               }
             }
           ],
@@ -2672,7 +2672,7 @@
               "units": "FLOP",
               "formula": "(PMC0*8.0)",
               "events": {
-                "PMC0": "SIMD_FP_256_PACKED_SINGLE"
+                "PMC0": "r0111"
               }
             },
             {
@@ -2680,7 +2680,7 @@
               "units": "FLOP",
               "formula": "(PMC1*4.0)",
               "events": {
-                "PMC1": "SIMD_FP_256_PACKED_DOUBLE"
+                "PMC1": "r0211"
               }
             },
             {
@@ -2688,9 +2688,9 @@
               "units": "FLOP",
               "formula": "(PMC0*2.0+PMC1+PMC2*4.0)",
               "events": {
-                "PMC0": "FP_COMP_OPS_EXE_SSE_FP_PACKED_DOUBLE",
-                "PMC1": "FP_COMP_OPS_EXE_SSE_FP_SCALAR_DOUBLE",
-                "PMC2": "SIMD_FP_256_PACKED_DOUBLE"
+                "PMC0": "r1010",
+                "PMC1": "r8010",
+                "PMC2": "r0211"
               }
             },
             {
@@ -2698,7 +2698,7 @@
               "units": "FLOP",
               "formula": "(PMC2*4.0)",
               "events": {
-                "PMC2": "SIMD_FP_256_PACKED_DOUBLE"
+                "PMC2": "r0211"
               }
             },
             {
@@ -2706,9 +2706,9 @@
               "units": "FLOP",
               "formula": "(PMC0*4.0+PMC1+PMC2*8.0)",
               "events": {
-                "PMC0": "FP_COMP_OPS_EXE_SSE_FP_PACKED_SINGLE",
-                "PMC1": "FP_COMP_OPS_EXE_SSE_FP_SCALAR_SINGLE",
-                "PMC2": "SIMD_FP_256_PACKED_SINGLE"
+                "PMC0": "r4010",
+                "PMC1": "r2010",
+                "PMC2": "r0111"
               }
             },
             {
@@ -2716,7 +2716,7 @@
               "units": "FLOP",
               "formula": "(PMC2*8.0)",
               "events": {
-                "PMC2": "SIMD_FP_256_PACKED_SINGLE"
+                "PMC2": "r0111"
               }
             }
           ],
@@ -2726,10 +2726,10 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0+MBOX2C0+MBOX3C0)*64.0",
               "events": {
-                "MBOX0C0": "CAS_COUNT_RD",
-                "MBOX1C0": "CAS_COUNT_RD",
-                "MBOX2C0": "CAS_COUNT_RD",
-                "MBOX3C0": "CAS_COUNT_RD"
+                "MBOX0C0": "r0304",
+                "MBOX1C0": "r0304",
+                "MBOX2C0": "r0304",
+                "MBOX3C0": "r0304"
               }
             },
             {
@@ -2737,10 +2737,10 @@
               "units": "Bytes",
               "formula": "(MBOX0C1+MBOX1C1+MBOX2C1+MBOX3C1)*64.0",
               "events": {
-                "MBOX0C1": "CAS_COUNT_WR",
-                "MBOX1C1": "CAS_COUNT_WR",
-                "MBOX2C1": "CAS_COUNT_WR",
-                "MBOX3C1": "CAS_COUNT_WR"
+                "MBOX0C1": "r0c04",
+                "MBOX1C1": "r0c04",
+                "MBOX2C1": "r0c04",
+                "MBOX3C1": "r0c04"
               }
             },
             {
@@ -2748,14 +2748,14 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0+MBOX2C0+MBOX3C0+MBOX0C1+MBOX1C1+MBOX2C1+MBOX3C1)*64.0",
               "events": {
-                "MBOX0C0": "CAS_COUNT_RD",
-                "MBOX0C1": "CAS_COUNT_WR",
-                "MBOX1C0": "CAS_COUNT_RD",
-                "MBOX1C1": "CAS_COUNT_WR",
-                "MBOX2C0": "CAS_COUNT_RD",
-                "MBOX2C1": "CAS_COUNT_WR",
-                "MBOX3C0": "CAS_COUNT_RD",
-                "MBOX3C1": "CAS_COUNT_WR"
+                "MBOX0C0": "r0304",
+                "MBOX0C1": "r0c04",
+                "MBOX1C0": "r0304",
+                "MBOX1C1": "r0c04",
+                "MBOX2C0": "r0304",
+                "MBOX2C1": "r0c04",
+                "MBOX3C0": "r0304",
+                "MBOX3C1": "r0c04"
               }
             }
           ]
@@ -2801,7 +2801,7 @@
               "units": "Bytes",
               "formula": "(PMC0)*64.0",
               "events": {
-                "PMC0": "LONGEST_LAT_CACHE_MISS"
+                "PMC0": "r412e"
               }
             },
             {
@@ -2809,7 +2809,7 @@
               "units": "Bytes",
               "formula": "(PMC1)*64.0",
               "events": {
-                "PMC1": "OFFCORE_RESPONSE_1_WB_ANY"
+                "PMC1": "r02b7"
               }
             },
             {
@@ -2817,8 +2817,8 @@
               "units": "Bytes",
               "formula": "(PMC0+PMC1)*64.0",
               "events": {
-                "PMC0": "LONGEST_LAT_CACHE_MISS",
-                "PMC1": "OFFCORE_RESPONSE_1_WB_ANY"
+                "PMC0": "r412e",
+                "PMC1": "r02b7"
               }
             }
           ]
@@ -2859,7 +2859,7 @@
               "units": "FLOP",
               "formula": "(PMC0*8.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE"
+                "PMC0": "r20c7"
               }
             },
             {
@@ -2867,7 +2867,7 @@
               "units": "FLOP",
               "formula": "(PMC1*4.0)",
               "events": {
-                "PMC1": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE"
+                "PMC1": "r10c7"
               }
             },
             {
@@ -2875,9 +2875,9 @@
               "units": "FLOP",
               "formula": "(PMC0*2.0+PMC1+PMC2*4.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE",
-                "PMC1": "FP_ARITH_INST_RETIRED_SCALAR_DOUBLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE"
+                "PMC0": "r04c7",
+                "PMC1": "r01c7",
+                "PMC2": "r10c7"
               }
             },
             {
@@ -2885,7 +2885,7 @@
               "units": "FLOP",
               "formula": "(PMC2*4.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE"
+                "PMC2": "r10c7"
               }
             },
             {
@@ -2893,9 +2893,9 @@
               "units": "FLOP",
               "formula": "(PMC0*4.0+PMC1+PMC2*8.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_128B_PACKED_SINGLE",
-                "PMC1": "FP_ARITH_INST_RETIRED_SCALAR_SINGLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE"
+                "PMC0": "r08c7",
+                "PMC1": "r02c7",
+                "PMC2": "r20c7"
               }
             },
             {
@@ -2903,7 +2903,7 @@
               "units": "FLOP",
               "formula": "(PMC2*8.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE"
+                "PMC2": "r20c7"
               }
             }
           ],
@@ -2913,7 +2913,7 @@
               "units": "Bytes",
               "formula": "MBOX0C1*64.0",
               "events": {
-                "MBOX0C1": "DRAM_READS"
+                "MBOX0C1": "r0101"
               }
             },
             {
@@ -2921,7 +2921,7 @@
               "units": "Bytes",
               "formula": "MBOX0C2*64.0",
               "events": {
-                "MBOX0C2": "DRAM_WRITES"
+                "MBOX0C2": "r0202"
               }
             },
             {
@@ -2929,8 +2929,8 @@
               "units": "Bytes",
               "formula": "(MBOX0C1+MBOX0C2)*64.0",
               "events": {
-                "MBOX0C1": "DRAM_READS",
-                "MBOX0C2": "DRAM_WRITES"
+                "MBOX0C1": "r0101",
+                "MBOX0C2": "r0202"
               }
             }
           ]
@@ -2956,8 +2956,8 @@
               "units": "FLOP",
               "formula": "(PMC0*8.0+PMC2*16.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC0": "r20c7",
+                "PMC2": "r80c7"
               }
             },
             {
@@ -2965,8 +2965,8 @@
               "units": "FLOP",
               "formula": "(PMC1*4.0+PMC3*8.0)",
               "events": {
-                "PMC1": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC1": "r10c7",
+                "PMC3": "r40c7"
               }
             },
             {
@@ -2974,10 +2974,10 @@
               "units": "FLOP",
               "formula": "(PMC0*2.0+PMC1+PMC2*4.0+PMC3*8.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_128B_PACKED_DOUBLE",
-                "PMC1": "FP_ARITH_INST_RETIRED_SCALAR_DOUBLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC0": "r04c7",
+                "PMC1": "r01c7",
+                "PMC2": "r10c7",
+                "PMC3": "r40c7"
               }
             },
             {
@@ -2985,8 +2985,8 @@
               "units": "FLOP",
               "formula": "(PMC2*4.0+PMC3*8.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_DOUBLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC2": "r10c7",
+                "PMC3": "r40c7"
               }
             },
             {
@@ -2994,7 +2994,7 @@
               "units": "FLOP",
               "formula": "(PMC3*8.0)",
               "events": {
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_DOUBLE"
+                "PMC3": "r40c7"
               }
             },
             {
@@ -3002,10 +3002,10 @@
               "units": "FLOP",
               "formula": "(PMC0*4.0+PMC1+PMC2*8.0+PMC3*16.0)",
               "events": {
-                "PMC0": "FP_ARITH_INST_RETIRED_128B_PACKED_SINGLE",
-                "PMC1": "FP_ARITH_INST_RETIRED_SCALAR_SINGLE",
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC0": "r08c7",
+                "PMC1": "r02c7",
+                "PMC2": "r20c7",
+                "PMC3": "r80c7"
               }
             },
             {
@@ -3013,8 +3013,8 @@
               "units": "FLOP",
               "formula": "(PMC2*8.0+PMC3*16.0)",
               "events": {
-                "PMC2": "FP_ARITH_INST_RETIRED_256B_PACKED_SINGLE",
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC2": "r20c7",
+                "PMC3": "r80c7"
               }
             },
             {
@@ -3022,7 +3022,7 @@
               "units": "FLOP",
               "formula": "(PMC3*16.0)",
               "events": {
-                "PMC3": "FP_ARITH_INST_RETIRED_512B_PACKED_SINGLE"
+                "PMC3": "r80c7"
               }
             }
           ],
@@ -3032,12 +3032,12 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0+MBOX2C0+MBOX3C0+MBOX4C0+MBOX5C0)*64.0",
               "events": {
-                "MBOX0C0": "CAS_COUNT_RD",
-                "MBOX1C0": "CAS_COUNT_RD",
-                "MBOX2C0": "CAS_COUNT_RD",
-                "MBOX3C0": "CAS_COUNT_RD",
-                "MBOX4C0": "CAS_COUNT_RD",
-                "MBOX5C0": "CAS_COUNT_RD"
+                "MBOX0C0": "r0304",
+                "MBOX1C0": "r0304",
+                "MBOX2C0": "r0304",
+                "MBOX3C0": "r0304",
+                "MBOX4C0": "r0304",
+                "MBOX5C0": "r0304"
               }
             },
             {
@@ -3045,12 +3045,12 @@
               "units": "Bytes",
               "formula": "(MBOX0C1+MBOX1C1+MBOX2C1+MBOX3C1+MBOX4C1+MBOX5C1)*64.0",
               "events": {
-                "MBOX0C1": "CAS_COUNT_WR",
-                "MBOX1C1": "CAS_COUNT_WR",
-                "MBOX2C1": "CAS_COUNT_WR",
-                "MBOX3C1": "CAS_COUNT_WR",
-                "MBOX4C1": "CAS_COUNT_WR",
-                "MBOX5C1": "CAS_COUNT_WR"
+                "MBOX0C1": "r0c04",
+                "MBOX1C1": "r0c04",
+                "MBOX2C1": "r0c04",
+                "MBOX3C1": "r0c04",
+                "MBOX4C1": "r0c04",
+                "MBOX5C1": "r0c04"
               }
             },
             {
@@ -3058,18 +3058,18 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0+MBOX2C0+MBOX3C0+MBOX4C0+MBOX5C0+MBOX0C1+MBOX1C1+MBOX2C1+MBOX3C1+MBOX4C1+MBOX5C1)*64.0",
               "events": {
-                "MBOX0C0": "CAS_COUNT_RD",
-                "MBOX0C1": "CAS_COUNT_WR",
-                "MBOX1C0": "CAS_COUNT_RD",
-                "MBOX1C1": "CAS_COUNT_WR",
-                "MBOX2C0": "CAS_COUNT_RD",
-                "MBOX2C1": "CAS_COUNT_WR",
-                "MBOX3C0": "CAS_COUNT_RD",
-                "MBOX3C1": "CAS_COUNT_WR",
-                "MBOX4C0": "CAS_COUNT_RD",
-                "MBOX4C1": "CAS_COUNT_WR",
-                "MBOX5C0": "CAS_COUNT_RD",
-                "MBOX5C1": "CAS_COUNT_WR"
+                "MBOX0C0": "r0304",
+                "MBOX0C1": "r0c04",
+                "MBOX1C0": "r0304",
+                "MBOX1C1": "r0c04",
+                "MBOX2C0": "r0304",
+                "MBOX2C1": "r0c04",
+                "MBOX3C0": "r0304",
+                "MBOX3C1": "r0c04",
+                "MBOX4C0": "r0304",
+                "MBOX4C1": "r0c04",
+                "MBOX5C0": "r0304",
+                "MBOX5C1": "r0c04"
               }
             }
           ]
@@ -3098,8 +3098,8 @@
               "units": "FLOP",
               "formula": "(PMC0*2.0+PMC1)",
               "events": {
-                "PMC0": "FP_COMP_OPS_EXE_SSE_FP_PACKED",
-                "PMC1": "FP_COMP_OPS_EXE_SSE_FP_SCALAR"
+                "PMC0": "r1010",
+                "PMC1": "r2010"
               }
             },
             {
@@ -3107,8 +3107,8 @@
               "units": "FLOP",
               "formula": "(PMC0*4.0+PMC1)",
               "events": {
-                "PMC0": "FP_COMP_OPS_EXE_SSE_FP_PACKED",
-                "PMC1": "FP_COMP_OPS_EXE_SSE_FP_SCALAR"
+                "PMC0": "r1010",
+                "PMC1": "r2010"
               }
             },
             {
@@ -3116,7 +3116,7 @@
               "units": "FLOP",
               "formula": "PMC0",
               "events": {
-                "PMC0": "INST_RETIRED_X87"
+                "PMC0": "r02c0"
               }
             }
           ],
@@ -3126,7 +3126,7 @@
               "units": "Bytes",
               "formula": "UPMC0*64.0",
               "events": {
-                "UPMC0": "UNC_QMC_NORMAL_READS_ANY"
+                "UPMC0": "r072c"
               }
             },
             {
@@ -3134,7 +3134,7 @@
               "units": "Bytes",
               "formula": "UPMC1*64.0",
               "events": {
-                "UPMC1": "UNC_QMC_WRITES_FULL_ANY"
+                "UPMC1": "r072f"
               }
             },
             {
@@ -3142,8 +3142,8 @@
               "units": "Bytes",
               "formula": "(UPMC0+UPMC1)*64.0",
               "events": {
-                "UPMC0": "UNC_QMC_NORMAL_READS_ANY",
-                "UPMC1": "UNC_QMC_WRITES_FULL_ANY"
+                "UPMC0": "r072c",
+                "UPMC1": "r072f"
               }
             },
             {
@@ -3151,7 +3151,7 @@
               "units": "Bytes",
               "formula": "UPMC2*64.0",
               "events": {
-                "UPMC2": "UNC_QHL_REQUESTS_REMOTE_READS"
+                "UPMC2": "r0420"
               }
             },
             {
@@ -3159,7 +3159,7 @@
               "units": "Bytes",
               "formula": "UPMC3*64.0",
               "events": {
-                "UPMC3": "UNC_QHL_REQUESTS_REMOTE_WRITES"
+                "UPMC3": "r0820"
               }
             },
             {
@@ -3167,8 +3167,8 @@
               "units": "Bytes",
               "formula": "(UPMC2+UPMC3)*64.0",
               "events": {
-                "UPMC2": "UNC_QHL_REQUESTS_REMOTE_READS",
-                "UPMC3": "UNC_QHL_REQUESTS_REMOTE_WRITES"
+                "UPMC2": "r0420",
+                "UPMC3": "r0820"
               }
             }
           ]
@@ -3193,8 +3193,8 @@
               "units": "FLOP",
               "formula": "(PMC0*2.0+PMC1)",
               "events": {
-                "PMC0": "FP_COMP_OPS_EXE_SSE_FP_PACKED",
-                "PMC1": "FP_COMP_OPS_EXE_SSE_FP_SCALAR"
+                "PMC0": "r1010",
+                "PMC1": "r2010"
               }
             },
             {
@@ -3202,8 +3202,8 @@
               "units": "FLOP",
               "formula": "(PMC0*4.0+PMC1)",
               "events": {
-                "PMC0": "FP_COMP_OPS_EXE_SSE_FP_PACKED",
-                "PMC1": "FP_COMP_OPS_EXE_SSE_FP_SCALAR"
+                "PMC0": "r1010",
+                "PMC1": "r2010"
               }
             },
             {
@@ -3211,7 +3211,7 @@
               "units": "FLOP",
               "formula": "PMC0",
               "events": {
-                "PMC0": "INST_RETIRED_X87"
+                "PMC0": "r02c0"
               }
             }
           ],
@@ -3221,8 +3221,8 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0)*64.0",
               "events": {
-                "MBOX0C0": "FVC_EV0_BBOX_CMDS_READS",
-                "MBOX1C0": "FVC_EV0_BBOX_CMDS_READS"
+                "MBOX0C0": "r050d",
+                "MBOX1C0": "r050d"
               }
             },
             {
@@ -3230,10 +3230,10 @@
               "units": "Bytes",
               "formula": "(MBOX0C1+MBOX0C2+MBOX1C1+MBOX1C2)*64.0",
               "events": {
-                "MBOX0C1": "DRAM_CMD_CAS_WR_OPN",
-                "MBOX0C2": "DRAM_MISC_CAS_WR_CLS",
-                "MBOX1C1": "DRAM_CMD_CAS_WR_OPN",
-                "MBOX1C2": "DRAM_MISC_CAS_WR_CLS"
+                "MBOX0C1": "r040a",
+                "MBOX0C2": "r060b",
+                "MBOX1C1": "r040a",
+                "MBOX1C2": "r060b"
               }
             },
             {
@@ -3241,12 +3241,12 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0+MBOX0C1+MBOX1C1+MBOX0C2+MBOX1C2)*64",
               "events": {
-                "MBOX0C0": "FVC_EV0_BBOX_CMDS_READS",
-                "MBOX0C1": "DRAM_CMD_CAS_WR_OPN",
-                "MBOX0C2": "DRAM_MISC_CAS_WR_CLS",
-                "MBOX1C0": "FVC_EV0_BBOX_CMDS_READS",
-                "MBOX1C1": "DRAM_CMD_CAS_WR_OPN",
-                "MBOX1C2": "DRAM_MISC_CAS_WR_CLS"
+                "MBOX0C0": "r050d",
+                "MBOX0C1": "r040a",
+                "MBOX0C2": "r060b",
+                "MBOX1C0": "r050d",
+                "MBOX1C1": "r040a",
+                "MBOX1C2": "r060b"
               }
             }
           ]
@@ -3277,7 +3277,7 @@
               "units": "FLOP",
               "formula": "(PMC3)",
               "events": {
-                "PMC3": "FP_DP_FIXED_OPS_SPEC"
+                "PMC3": "r0080c7"
               }
             },
             {
@@ -3285,8 +3285,8 @@
               "units": "FLOP",
               "formula": "(((PMC4*128)/128)+PMC3)",
               "events": {
-                "PMC3": "FP_DP_FIXED_OPS_SPEC",
-                "PMC4": "FP_DP_SCALE_OPS_SPEC"
+                "PMC3": "r0080c7",
+                "PMC4": "r0080c6"
               }
             },
             {
@@ -3294,8 +3294,8 @@
               "units": "FLOP",
               "formula": "(((PMC4*256)/128)+PMC3)",
               "events": {
-                "PMC3": "FP_DP_FIXED_OPS_SPEC",
-                "PMC4": "FP_DP_SCALE_OPS_SPEC"
+                "PMC3": "r0080c7",
+                "PMC4": "r0080c6"
               }
             },
             {
@@ -3303,8 +3303,8 @@
               "units": "FLOP",
               "formula": "(((PMC4*512)/128)+PMC3)",
               "events": {
-                "PMC3": "FP_DP_FIXED_OPS_SPEC",
-                "PMC4": "FP_DP_SCALE_OPS_SPEC"
+                "PMC3": "r0080c7",
+                "PMC4": "r0080c6"
               }
             },
             {
@@ -3312,7 +3312,7 @@
               "units": "FLOP",
               "formula": "(PMC3)",
               "events": {
-                "PMC3": "FP_HP_FIXED_OPS_SPEC"
+                "PMC3": "r0080c3"
               }
             },
             {
@@ -3320,8 +3320,8 @@
               "units": "FLOP",
               "formula": "(((PMC4*128)/128)+PMC3)",
               "events": {
-                "PMC3": "FP_HP_FIXED_OPS_SPEC",
-                "PMC4": "FP_HP_SCALE_OPS_SPEC"
+                "PMC3": "r0080c3",
+                "PMC4": "r0080c2"
               }
             },
             {
@@ -3329,8 +3329,8 @@
               "units": "FLOP",
               "formula": "(((PMC4*256)/128)+PMC3)",
               "events": {
-                "PMC3": "FP_HP_FIXED_OPS_SPEC",
-                "PMC4": "FP_HP_SCALE_OPS_SPEC"
+                "PMC3": "r0080c3",
+                "PMC4": "r0080c2"
               }
             },
             {
@@ -3338,8 +3338,8 @@
               "units": "FLOP",
               "formula": "(((PMC4*512)/128)+PMC3)",
               "events": {
-                "PMC3": "FP_HP_FIXED_OPS_SPEC",
-                "PMC4": "FP_HP_SCALE_OPS_SPEC"
+                "PMC3": "r0080c3",
+                "PMC4": "r0080c2"
               }
             },
             {
@@ -3347,7 +3347,7 @@
               "units": "FLOP",
               "formula": "(PMC3)",
               "events": {
-                "PMC3": "FP_SP_FIXED_OPS_SPEC"
+                "PMC3": "r0080c5"
               }
             },
             {
@@ -3355,8 +3355,8 @@
               "units": "FLOP",
               "formula": "(((PMC4*128)/128)+PMC3)",
               "events": {
-                "PMC3": "FP_SP_FIXED_OPS_SPEC",
-                "PMC4": "FP_SP_SCALE_OPS_SPEC"
+                "PMC3": "r0080c5",
+                "PMC4": "r0080c4"
               }
             },
             {
@@ -3364,8 +3364,8 @@
               "units": "FLOP",
               "formula": "(((PMC4*256)/128)+PMC3)",
               "events": {
-                "PMC3": "FP_SP_FIXED_OPS_SPEC",
-                "PMC4": "FP_SP_SCALE_OPS_SPEC"
+                "PMC3": "r0080c5",
+                "PMC4": "r0080c4"
               }
             },
             {
@@ -3373,8 +3373,8 @@
               "units": "FLOP",
               "formula": "(((PMC4*512)/128)+PMC3)",
               "events": {
-                "PMC3": "FP_SP_FIXED_OPS_SPEC",
-                "PMC4": "FP_SP_SCALE_OPS_SPEC"
+                "PMC3": "r0080c5",
+                "PMC4": "r0080c4"
               }
             }
           ],
@@ -3384,9 +3384,9 @@
               "units": "Bytes",
               "formula": "(PMC2-(PMC4+PMC5))*256.0",
               "events": {
-                "PMC2": "L2D_CACHE_REFILL",
-                "PMC4": "L2D_SWAP_DM",
-                "PMC5": "L2D_CACHE_MIBMCH_PRF"
+                "PMC2": "r0017",
+                "PMC4": "r00325",
+                "PMC5": "r00326"
               }
             },
             {
@@ -3394,7 +3394,7 @@
               "units": "Bytes",
               "formula": "(PMC3)*256.0",
               "events": {
-                "PMC3": "L2D_CACHE_WB"
+                "PMC3": "r0018"
               }
             },
             {
@@ -3402,10 +3402,10 @@
               "units": "Bytes",
               "formula": "((PMC2-(PMC4+PMC5))+PMC3)*256.0",
               "events": {
-                "PMC2": "L2D_CACHE_REFILL",
-                "PMC3": "L2D_CACHE_WB",
-                "PMC4": "L2D_SWAP_DM",
-                "PMC5": "L2D_CACHE_MIBMCH_PRF"
+                "PMC2": "r0017",
+                "PMC3": "r0018",
+                "PMC4": "r00325",
+                "PMC5": "r00326"
               }
             }
           ]
@@ -3463,7 +3463,7 @@
               "units": "Bytes",
               "formula": "(PMC2)*64.0",
               "events": {
-                "PMC2": "L2D_CACHE_REFILL"
+                "PMC2": "r0017"
               }
             },
             {
@@ -3471,7 +3471,7 @@
               "units": "Bytes",
               "formula": "(PMC3)*64.0",
               "events": {
-                "PMC3": "L2D_CACHE_WB"
+                "PMC3": "r0018"
               }
             },
             {
@@ -3479,8 +3479,8 @@
               "units": "Bytes",
               "formula": "(PMC2+PMC3)*64.0",
               "events": {
-                "PMC2": "L2D_CACHE_REFILL",
-                "PMC3": "L2D_CACHE_WB"
+                "PMC2": "r0017",
+                "PMC3": "r0018"
               }
             }
           ]
@@ -3506,7 +3506,7 @@
               "units": "Bytes",
               "formula": "(PMC2)*64.0",
               "events": {
-                "PMC2": "MEM_ACCESS_RD"
+                "PMC2": "r0066"
               }
             },
             {
@@ -3514,7 +3514,7 @@
               "units": "Bytes",
               "formula": "(PMC3)*64.0",
               "events": {
-                "PMC3": "MEM_ACCESS_WR"
+                "PMC3": "r0067"
               }
             },
             {
@@ -3522,8 +3522,8 @@
               "units": "Bytes",
               "formula": "(PMC2+PMC3)*64.0",
               "events": {
-                "PMC2": "MEM_ACCESS_RD",
-                "PMC3": "MEM_ACCESS_WR"
+                "PMC2": "r0066",
+                "PMC3": "r0067"
               }
             }
           ]
@@ -3560,8 +3560,8 @@
               "units": "FLOP",
               "formula": "(PMC3*2.0+PMC2)",
               "events": {
-                "PMC2": "VFP_SPEC",
-                "PMC3": "ASE_SPEC"
+                "PMC2": "r0075",
+                "PMC3": "r0074"
               }
             },
             {
@@ -3569,7 +3569,7 @@
               "units": "FLOP",
               "formula": "(PMC3*2.0)",
               "events": {
-                "PMC3": "ASE_SPEC"
+                "PMC3": "r0074"
               }
             },
             {
@@ -3577,8 +3577,8 @@
               "units": "FLOP",
               "formula": "(PMC3*4.0+PMC2)",
               "events": {
-                "PMC2": "VFP_SPEC",
-                "PMC3": "ASE_SPEC"
+                "PMC2": "r0075",
+                "PMC3": "r0074"
               }
             },
             {
@@ -3586,7 +3586,7 @@
               "units": "FLOP",
               "formula": "(PMC3*4.0)",
               "events": {
-                "PMC3": "ASE_SPEC"
+                "PMC3": "r0074"
               }
             }
           ],
@@ -3596,8 +3596,8 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0)*64.0",
               "events": {
-                "MBOX0C0": "MEMORY_READS",
-                "MBOX1C0": "MEMORY_READS"
+                "MBOX0C0": "r000f",
+                "MBOX1C0": "r000f"
               }
             },
             {
@@ -3605,8 +3605,8 @@
               "units": "Bytes",
               "formula": "(MBOX0C1+MBOX1C1)*64.0",
               "events": {
-                "MBOX0C1": "MEMORY_WRITES",
-                "MBOX1C1": "MEMORY_WRITES"
+                "MBOX0C1": "r000b",
+                "MBOX1C1": "r000b"
               }
             },
             {
@@ -3614,10 +3614,10 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0+MBOX0C1+MBOX1C1)*64.0",
               "events": {
-                "MBOX0C0": "MEMORY_READS",
-                "MBOX0C1": "MEMORY_WRITES",
-                "MBOX1C0": "MEMORY_READS",
-                "MBOX1C1": "MEMORY_WRITES"
+                "MBOX0C0": "r000f",
+                "MBOX0C1": "r000b",
+                "MBOX1C0": "r000f",
+                "MBOX1C1": "r000b"
               }
             }
           ]
@@ -3642,8 +3642,8 @@
               "units": "FLOP",
               "formula": "(PMC3+PMC4)",
               "events": {
-                "PMC3": "FP_FIXED_OPS_SPEC",
-                "PMC4": "FP_SCALE_OPS_SPEC"
+                "PMC3": "r0080c1",
+                "PMC4": "r0080c0"
               }
             }
           ],
@@ -3653,7 +3653,7 @@
               "units": "Bytes",
               "formula": "(SCF0)*32.0",
               "events": {
-                "SCF0": "CMEM_RD_DATA"
+                "SCF0": "r001a5"
               }
             },
             {
@@ -3661,7 +3661,7 @@
               "units": "Bytes",
               "formula": "(SCF1)",
               "events": {
-                "SCF1": "CMEM_WR_TOTAL_BYTES"
+                "SCF1": "r001db"
               }
             },
             {
@@ -3669,8 +3669,8 @@
               "units": "Bytes",
               "formula": "((SCF0*32.0)+SCF1)",
               "events": {
-                "SCF0": "CMEM_RD_DATA",
-                "SCF1": "CMEM_WR_TOTAL_BYTES"
+                "SCF0": "r001a5",
+                "SCF1": "r001db"
               }
             }
           ]
@@ -3697,7 +3697,7 @@
               "units": "FLOP",
               "formula": "(PMC3)",
               "events": {
-                "PMC3": "RETIRED_FLOPS_DOUBLE_ALL"
+                "PMC3": "rf003"
               }
             },
             {
@@ -3705,7 +3705,7 @@
               "units": "FLOP",
               "formula": "(PMC3)",
               "events": {
-                "PMC3": "RETIRED_FLOPS_SINGLE_ALL"
+                "PMC3": "r0f03"
               }
             }
           ],
@@ -3715,8 +3715,8 @@
               "units": "Bytes",
               "formula": "(UPMC0+UPMC1)*64.0",
               "events": {
-                "UPMC0": "UNC_DRAM_ACCESSES_DCT0_ALL",
-                "UPMC1": "UNC_DRAM_ACCESSES_DCT1_ALL"
+                "UPMC0": "r070e0",
+                "UPMC1": "r380e0"
               }
             }
           ]
@@ -3763,8 +3763,8 @@
               "units": "FLOP",
               "formula": "(PMC0+PMC1)",
               "events": {
-                "PMC0": "SSE_RETIRED_ADD_DOUBLE_FLOPS",
-                "PMC1": "SSE_RETIRED_MULT_DOUBLE_FLOPS"
+                "PMC0": "r4803",
+                "PMC1": "r5003"
               }
             },
             {
@@ -3772,7 +3772,7 @@
               "units": "FLOP",
               "formula": "PMC0",
               "events": {
-                "PMC0": "SSE_RETIRED_ADD_DOUBLE_FLOPS"
+                "PMC0": "r4803"
               }
             },
             {
@@ -3780,7 +3780,7 @@
               "units": "FLOP",
               "formula": "PMC1",
               "events": {
-                "PMC1": "SSE_RETIRED_MULT_DOUBLE_FLOPS"
+                "PMC1": "r5003"
               }
             },
             {
@@ -3788,8 +3788,8 @@
               "units": "FLOP",
               "formula": "(PMC0+PMC1)",
               "events": {
-                "PMC0": "SSE_RETIRED_ADD_SINGLE_FLOPS",
-                "PMC1": "SSE_RETIRED_MULT_SINGLE_FLOPS"
+                "PMC0": "r4103",
+                "PMC1": "r4203"
               }
             },
             {
@@ -3797,7 +3797,7 @@
               "units": "FLOP",
               "formula": "PMC0",
               "events": {
-                "PMC0": "SSE_RETIRED_ADD_SINGLE_FLOPS"
+                "PMC0": "r4103"
               }
             },
             {
@@ -3805,7 +3805,7 @@
               "units": "FLOP",
               "formula": "PMC1",
               "events": {
-                "PMC1": "SSE_RETIRED_MULT_SINGLE_FLOPS"
+                "PMC1": "r4203"
               }
             },
             {
@@ -3813,9 +3813,9 @@
               "units": "FLOP",
               "formula": "(PMC0+PMC1+PMC2)",
               "events": {
-                "PMC0": "X87_FLOPS_RETIRED_ADD",
-                "PMC1": "X87_FLOPS_RETIRED_MULT",
-                "PMC2": "X87_FLOPS_RETIRED_DIV"
+                "PMC0": "r011c0",
+                "PMC1": "r021c0",
+                "PMC2": "r041c0"
               }
             },
             {
@@ -3823,7 +3823,7 @@
               "units": "FLOP",
               "formula": "PMC0",
               "events": {
-                "PMC0": "X87_FLOPS_RETIRED_ADD"
+                "PMC0": "r011c0"
               }
             },
             {
@@ -3831,7 +3831,7 @@
               "units": "FLOP",
               "formula": "PMC1",
               "events": {
-                "PMC1": "X87_FLOPS_RETIRED_MULT"
+                "PMC1": "r021c0"
               }
             },
             {
@@ -3839,7 +3839,7 @@
               "units": "FLOP",
               "formula": "PMC2",
               "events": {
-                "PMC2": "X87_FLOPS_RETIRED_DIV"
+                "PMC2": "r041c0"
               }
             }
           ],
@@ -3849,7 +3849,7 @@
               "units": "Bytes",
               "formula": "PMC0*64.0",
               "events": {
-                "PMC0": "NORTHBRIDGE_READ_RESPONSE_ALL"
+                "PMC0": "r076c"
               }
             },
             {
@@ -3857,7 +3857,7 @@
               "units": "Bytes",
               "formula": "PMC1*8.0",
               "events": {
-                "PMC1": "OCTWORDS_WRITE_TRANSFERS"
+                "PMC1": "r016d"
               }
             },
             {
@@ -3865,8 +3865,8 @@
               "units": "Bytes",
               "formula": "(PMC2+PMC3)*64.0",
               "events": {
-                "PMC2": "DRAM_ACCESSES_DCTO_ALL",
-                "PMC3": "DRAM_ACCESSES_DCT1_ALL"
+                "PMC2": "r07e0",
+                "PMC3": "r38e0"
               }
             }
           ]
@@ -3893,7 +3893,7 @@
               "units": "FLOP",
               "formula": "(PMC3)",
               "events": {
-                "PMC3": "RETIRED_FLOPS_DOUBLE_ALL"
+                "PMC3": "r7003"
               }
             },
             {
@@ -3901,7 +3901,7 @@
               "units": "FLOP",
               "formula": "(PMC3)",
               "events": {
-                "PMC3": "RETIRED_FLOPS_SINGLE_ALL"
+                "PMC3": "r0703"
               }
             }
           ],
@@ -3911,8 +3911,8 @@
               "units": "Bytes",
               "formula": "(UPMC0+UPMC1)*64.0",
               "events": {
-                "UPMC0": "UNC_DRAM_ACCESSES_DCT0_ALL",
-                "UPMC1": "UNC_DRAM_ACCESSES_DCT1_ALL"
+                "UPMC0": "r073ec",
+                "UPMC1": "r383ec"
               }
             }
           ]
@@ -3944,8 +3944,8 @@
               "units": "Bytes",
               "formula": "(PMC0+PMC1)*64.0",
               "events": {
-                "PMC0": "DATA_READ_MISS_OR_WRITE_MISS",
-                "PMC1": "DATA_CACHE_LINES_WRITTEN_BACK"
+                "PMC0": "r0029",
+                "PMC1": "r0006"
               }
             }
           ]
@@ -3972,9 +3972,9 @@
               "units": "FLOP",
               "formula": "((PMC0*2.0)+PMC2+(PMC1*4.0))",
               "events": {
-                "PMC0": "PM_VSU0_DP_2FLOP",
-                "PMC1": "PM_VSU0_DP_FMA",
-                "PMC2": "PM_VSU0_DP_FSQRT_FDIV"
+                "PMC0": "r0a8c",
+                "PMC1": "r0a90",
+                "PMC2": "r0a94"
               }
             },
             {
@@ -3982,8 +3982,8 @@
               "units": "FLOP",
               "formula": "((PMC1*4.0)+(PMC0*2.0))",
               "events": {
-                "PMC0": "PM_VSU0_DP_2FLOP",
-                "PMC1": "PM_VSU0_DP_FMA"
+                "PMC0": "r0a8c",
+                "PMC1": "r0a90"
               }
             },
             {
@@ -3991,9 +3991,9 @@
               "units": "FLOP",
               "formula": "(PMC0+PMC2+(PMC1)*4.0)",
               "events": {
-                "PMC0": "PM_VSU1_DP_2FLOP",
-                "PMC1": "PM_VSU1_DP_FMA",
-                "PMC2": "PM_VSU1_DP_FSQRT_FDIV"
+                "PMC0": "r0a8e",
+                "PMC1": "r0a92",
+                "PMC2": "r0a96"
               }
             },
             {
@@ -4001,7 +4001,7 @@
               "units": "FLOP",
               "formula": "((PMC1)*4.0)",
               "events": {
-                "PMC1": "PM_VSU1_DP_FMA"
+                "PMC1": "r0a92"
               }
             },
             {
@@ -4009,8 +4009,8 @@
               "units": "FLOP",
               "formula": "(PMC0+PMC1)*4.0",
               "events": {
-                "PMC0": "PM_VSU0_DP_FMA",
-                "PMC1": "PM_VSU1_DP_FMA"
+                "PMC0": "r0a90",
+                "PMC1": "r0a92"
               }
             },
             {
@@ -4018,8 +4018,8 @@
               "units": "FLOP",
               "formula": "(PMC2+PMC3)*2.0",
               "events": {
-                "PMC2": "PM_VSU0_FMA",
-                "PMC3": "PM_VSU1_FMA"
+                "PMC2": "r0a84",
+                "PMC3": "r0a86"
               }
             },
             {
@@ -4027,10 +4027,10 @@
               "units": "FLOP",
               "formula": "(((PMC0-PMC1)+(PMC2-PMC3))*4.0+(PMC1+PMC3)*8.0)",
               "events": {
-                "PMC0": "PM_VSU0_SINGLE",
-                "PMC1": "PM_VSU0_VECTOR_SP_ISSUED",
-                "PMC2": "PM_VSU1_SINGLE",
-                "PMC3": "PM_VSU1_VECTOR_SP_ISSUED"
+                "PMC0": "r0aa8",
+                "PMC1": "r0b84",
+                "PMC2": "r0aaa",
+                "PMC3": "r0b86"
               }
             },
             {
@@ -4038,8 +4038,8 @@
               "units": "FLOP",
               "formula": "((PMC1+PMC3)*8.0)",
               "events": {
-                "PMC1": "PM_VSU0_VECTOR_SP_ISSUED",
-                "PMC3": "PM_VSU1_VECTOR_SP_ISSUED"
+                "PMC1": "r0b84",
+                "PMC3": "r0b86"
               }
             },
             {
@@ -4047,7 +4047,7 @@
               "units": "FLOP",
               "formula": "(PMC1*4.0)",
               "events": {
-                "PMC1": "PM_VSU0_DP_FMA"
+                "PMC1": "r0a90"
               }
             },
             {
@@ -4055,7 +4055,7 @@
               "units": "FLOP",
               "formula": "(PMC1*4.0)",
               "events": {
-                "PMC1": "PM_VSU1_DP_FMA"
+                "PMC1": "r0a92"
               }
             },
             {
@@ -4063,8 +4063,8 @@
               "units": "FLOP",
               "formula": "((PMC0+PMC1)*4.0)",
               "events": {
-                "PMC0": "PM_VSU0_VECTOR_DP_ISSUED",
-                "PMC1": "PM_VSU1_VECTOR_DP_ISSUED"
+                "PMC0": "r0b80",
+                "PMC1": "r0b82"
               }
             },
             {
@@ -4072,8 +4072,8 @@
               "units": "FLOP",
               "formula": "((PMC2+PMC3)*8.0)",
               "events": {
-                "PMC2": "PM_VSU0_VECTOR_SP_ISSUED",
-                "PMC3": "PM_VSU1_VECTOR_SP_ISSUED"
+                "PMC2": "r0b84",
+                "PMC3": "r0b86"
               }
             }
           ],
@@ -4083,8 +4083,8 @@
               "units": "Bytes",
               "formula": "(PMC1+PMC3)*128.0",
               "events": {
-                "PMC1": "PM_DATA_ALL_FROM_MEMORY",
-                "PMC3": "PM_L3_PF_ON_CHIP_MEM"
+                "PMC1": "r0c4c",
+                "PMC3": "r088c"
               }
             },
             {
@@ -4092,7 +4092,7 @@
               "units": "Bytes",
               "formula": "(PMC0)*128.0",
               "events": {
-                "PMC0": "PM_L3_CO_MEPF"
+                "PMC0": "r0882"
               }
             },
             {
@@ -4100,9 +4100,9 @@
               "units": "Bytes",
               "formula": "(PMC1+PMC3+PMC0)*128.0",
               "events": {
-                "PMC0": "PM_L3_CO_MEPF",
-                "PMC1": "PM_DATA_ALL_FROM_MEMORY",
-                "PMC3": "PM_L3_PF_ON_CHIP_MEM"
+                "PMC0": "r0882",
+                "PMC1": "r0c4c",
+                "PMC3": "r088c"
               }
             }
           ]
@@ -4127,7 +4127,7 @@
               "units": "FLOP",
               "formula": "PMC3*2.0",
               "events": {
-                "PMC3": "PM_FLOP_CMPL"
+                "PMC3": "r505e"
               }
             },
             {
@@ -4135,7 +4135,7 @@
               "units": "FLOP",
               "formula": "PMC3*8.0",
               "events": {
-                "PMC3": "PM_FLOP_CMPL"
+                "PMC3": "r505e"
               }
             },
             {
@@ -4143,7 +4143,7 @@
               "units": "FLOP",
               "formula": "PMC3*4.0",
               "events": {
-                "PMC3": "PM_FLOP_CMPL"
+                "PMC3": "r505e"
               }
             },
             {
@@ -4151,7 +4151,7 @@
               "units": "FLOP",
               "formula": "(PMC3)*2.0",
               "events": {
-                "PMC3": "PM_FMA_CMPL"
+                "PMC3": "r5054"
               }
             },
             {
@@ -4159,7 +4159,7 @@
               "units": "FLOP",
               "formula": "(PMC3*8.0)",
               "events": {
-                "PMC3": "PM_VECTOR_FLOP_CMPL"
+                "PMC3": "rd058"
               }
             },
             {
@@ -4167,7 +4167,7 @@
               "units": "FLOP",
               "formula": "(PMC3*4.0)",
               "events": {
-                "PMC3": "PM_VECTOR_FLOP_CMPL"
+                "PMC3": "rd058"
               }
             }
           ],
@@ -4177,14 +4177,14 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0+MBOX2C0+MBOX3C0+MBOX4C0+MBOX5C0+MBOX6C0+MBOX7C0)*64.0",
               "events": {
-                "MBOX0C0": "PM_MBA0_READ_BYTES",
-                "MBOX1C0": "PM_MBA1_READ_BYTES",
-                "MBOX2C0": "PM_MBA2_READ_BYTES",
-                "MBOX3C0": "PM_MBA3_READ_BYTES",
-                "MBOX4C0": "PM_MBA4_READ_BYTES",
-                "MBOX5C0": "PM_MBA5_READ_BYTES",
-                "MBOX6C0": "PM_MBA6_READ_BYTES",
-                "MBOX7C0": "PM_MBA7_READ_BYTES"
+                "MBOX0C0": "r0448",
+                "MBOX1C0": "r0460",
+                "MBOX2C0": "r0478",
+                "MBOX3C0": "r0490",
+                "MBOX4C0": "r0558",
+                "MBOX5C0": "r0570",
+                "MBOX6C0": "r0588",
+                "MBOX7C0": "r05a0"
               }
             },
             {
@@ -4192,14 +4192,14 @@
               "units": "Bytes",
               "formula": "(MBOX0C1+MBOX1C1+MBOX2C1+MBOX3C1+MBOX4C1+MBOX5C1+MBOX6C1+MBOX7C1)*64.0",
               "events": {
-                "MBOX0C1": "PM_MBA0_WRITE_BYTES",
-                "MBOX1C1": "PM_MBA1_WRITE_BYTES",
-                "MBOX2C1": "PM_MBA2_WRITE_BYTES",
-                "MBOX3C1": "PM_MBA3_WRITE_BYTES",
-                "MBOX4C1": "PM_MBA4_WRITE_BYTES",
-                "MBOX5C1": "PM_MBA5_WRITE_BYTES",
-                "MBOX6C1": "PM_MBA6_WRITE_BYTES",
-                "MBOX7C1": "PM_MBA7_WRITE_BYTES"
+                "MBOX0C1": "r0450",
+                "MBOX1C1": "r0468",
+                "MBOX2C1": "r0480",
+                "MBOX3C1": "r0498",
+                "MBOX4C1": "r0560",
+                "MBOX5C1": "r0578",
+                "MBOX6C1": "r0590",
+                "MBOX7C1": "r05a8"
               }
             },
             {
@@ -4207,22 +4207,22 @@
               "units": "Bytes",
               "formula": "(MBOX0C0+MBOX1C0+MBOX2C0+MBOX3C0+MBOX4C0+MBOX5C0+MBOX6C0+MBOX7C0+MBOX0C1+MBOX1C1+MBOX2C1+MBOX3C1+MBOX4C1+MBOX5C1+MBOX6C1+MBOX7C1)*64.0",
               "events": {
-                "MBOX0C0": "PM_MBA0_READ_BYTES",
-                "MBOX0C1": "PM_MBA0_WRITE_BYTES",
-                "MBOX1C0": "PM_MBA1_READ_BYTES",
-                "MBOX1C1": "PM_MBA1_WRITE_BYTES",
-                "MBOX2C0": "PM_MBA2_READ_BYTES",
-                "MBOX2C1": "PM_MBA2_WRITE_BYTES",
-                "MBOX3C0": "PM_MBA3_READ_BYTES",
-                "MBOX3C1": "PM_MBA3_WRITE_BYTES",
-                "MBOX4C0": "PM_MBA4_READ_BYTES",
-                "MBOX4C1": "PM_MBA4_WRITE_BYTES",
-                "MBOX5C0": "PM_MBA5_READ_BYTES",
-                "MBOX5C1": "PM_MBA5_WRITE_BYTES",
-                "MBOX6C0": "PM_MBA6_READ_BYTES",
-                "MBOX6C1": "PM_MBA6_WRITE_BYTES",
-                "MBOX7C0": "PM_MBA7_READ_BYTES",
-                "MBOX7C1": "PM_MBA7_WRITE_BYTES"
+                "MBOX0C0": "r0448",
+                "MBOX0C1": "r0450",
+                "MBOX1C0": "r0460",
+                "MBOX1C1": "r0468",
+                "MBOX2C0": "r0478",
+                "MBOX2C1": "r0480",
+                "MBOX3C0": "r0490",
+                "MBOX3C1": "r0498",
+                "MBOX4C0": "r0558",
+                "MBOX4C1": "r0560",
+                "MBOX5C0": "r0570",
+                "MBOX5C1": "r0578",
+                "MBOX6C0": "r0588",
+                "MBOX6C1": "r0590",
+                "MBOX7C0": "r05a0",
+                "MBOX7C1": "r05a8"
               }
             }
           ]
@@ -4261,7 +4261,7 @@
               "units": "FLOP",
               "formula": "(PMC2)",
               "events": {
-                "PMC2": "RETIRED_SSE_AVX_FLOPS_DOUBLE_ALL"
+                "PMC2": "rf003"
               }
             },
             {
@@ -4269,7 +4269,7 @@
               "units": "FLOP",
               "formula": "(PMC2)",
               "events": {
-                "PMC2": "RETIRED_SSE_AVX_FLOPS_SINGLE_ALL"
+                "PMC2": "r0f03"
               }
             }
           ],
@@ -4279,8 +4279,8 @@
               "units": "Bytes",
               "formula": "(DFC0+DFC1)*64.0",
               "events": {
-                "DFC0": "DRAM_CHANNEL_0",
-                "DFC1": "DRAM_CHANNEL_1"
+                "DFC0": "r3807",
+                "DFC1": "r3847"
               }
             }
           ]
@@ -4313,7 +4313,7 @@
               "units": "FLOP",
               "formula": "(PMC2)",
               "events": {
-                "PMC2": "RETIRED_SSE_AVX_FLOPS_ALL"
+                "PMC2": "r0f03"
               }
             },
             {
@@ -4321,7 +4321,7 @@
               "units": "FLOP",
               "formula": "(PMC2)",
               "events": {
-                "PMC2": "RETIRED_SSE_AVX_FLOPS_ALL"
+                "PMC2": "r0f03"
               }
             }
           ],
@@ -4331,8 +4331,8 @@
               "units": "Bytes",
               "formula": "(DFC0+DFC1)*(4.0/(num_numadomains/num_sockets))*64.0",
               "events": {
-                "DFC0": "DRAM_CHANNEL_0",
-                "DFC1": "DRAM_CHANNEL_1"
+                "DFC0": "r3807",
+                "DFC1": "r3847"
               }
             }
           ]
@@ -4375,7 +4375,7 @@
               "units": "FLOP",
               "formula": "(PMC2)",
               "events": {
-                "PMC2": "RETIRED_SSE_AVX_FLOPS_ALL"
+                "PMC2": "r0f03"
               }
             },
             {
@@ -4383,7 +4383,7 @@
               "units": "FLOP",
               "formula": "(PMC2)",
               "events": {
-                "PMC2": "RETIRED_SSE_AVX_FLOPS_ALL"
+                "PMC2": "r0f03"
               }
             }
           ],
@@ -4393,10 +4393,10 @@
               "units": "Bytes",
               "formula": "(DFC0+DFC1+DFC2+DFC3)*64.0",
               "events": {
-                "DFC0": "DRAM_CHANNEL_0",
-                "DFC1": "DRAM_CHANNEL_1",
-                "DFC2": "DRAM_CHANNEL_2",
-                "DFC3": "DRAM_CHANNEL_3"
+                "DFC0": "r3807",
+                "DFC1": "r3847",
+                "DFC2": "r3887",
+                "DFC3": "r38c7"
               }
             },
             {
@@ -4404,10 +4404,10 @@
               "units": "Bytes",
               "formula": "(DFC0+DFC1+DFC2+DFC3)*64.0",
               "events": {
-                "DFC0": "DRAM_CHANNEL_4",
-                "DFC1": "DRAM_CHANNEL_5",
-                "DFC2": "DRAM_CHANNEL_6",
-                "DFC3": "DRAM_CHANNEL_7"
+                "DFC0": "r38107",
+                "DFC1": "r38147",
+                "DFC2": "r38187",
+                "DFC3": "r381c7"
               }
             }
           ]
@@ -4452,7 +4452,7 @@
               "units": "FLOP",
               "formula": "(PMC2)",
               "events": {
-                "PMC2": "RETIRED_SSE_AVX_FLOPS_ALL"
+                "PMC2": "r1f03"
               }
             },
             {
@@ -4460,7 +4460,7 @@
               "units": "FLOP",
               "formula": "(PMC2)",
               "events": {
-                "PMC2": "RETIRED_SSE_AVX_FLOPS_ALL"
+                "PMC2": "r1f03"
               }
             }
           ],
@@ -4470,18 +4470,18 @@
               "units": "Bytes",
               "formula": "(UMC0C0+UMC1C0+UMC2C0+UMC3C0+UMC4C0+UMC5C0+UMC6C0+UMC7C0+UMC8C0+UMC9C0+UMC10C0+UMC11C0)*64.0",
               "events": {
-                "UMC0C0": "CAS_CMD_RD",
-                "UMC10C0": "CAS_CMD_RD",
-                "UMC11C0": "CAS_CMD_RD",
-                "UMC1C0": "CAS_CMD_RD",
-                "UMC2C0": "CAS_CMD_RD",
-                "UMC3C0": "CAS_CMD_RD",
-                "UMC4C0": "CAS_CMD_RD",
-                "UMC5C0": "CAS_CMD_RD",
-                "UMC6C0": "CAS_CMD_RD",
-                "UMC7C0": "CAS_CMD_RD",
-                "UMC8C0": "CAS_CMD_RD",
-                "UMC9C0": "CAS_CMD_RD"
+                "UMC0C0": "r000a",
+                "UMC10C0": "r000a",
+                "UMC11C0": "r000a",
+                "UMC1C0": "r000a",
+                "UMC2C0": "r000a",
+                "UMC3C0": "r000a",
+                "UMC4C0": "r000a",
+                "UMC5C0": "r000a",
+                "UMC6C0": "r000a",
+                "UMC7C0": "r000a",
+                "UMC8C0": "r000a",
+                "UMC9C0": "r000a"
               }
             },
             {
@@ -4489,18 +4489,18 @@
               "units": "Bytes",
               "formula": "(UMC0C1+UMC1C1+UMC2C1+UMC3C1+UMC4C1+UMC5C1+UMC6C1+UMC7C1+UMC8C1+UMC9C1+UMC10C1+UMC11C1)*64.0",
               "events": {
-                "UMC0C1": "CAS_CMD_WR",
-                "UMC10C1": "CAS_CMD_WR",
-                "UMC11C1": "CAS_CMD_WR",
-                "UMC1C1": "CAS_CMD_WR",
-                "UMC2C1": "CAS_CMD_WR",
-                "UMC3C1": "CAS_CMD_WR",
-                "UMC4C1": "CAS_CMD_WR",
-                "UMC5C1": "CAS_CMD_WR",
-                "UMC6C1": "CAS_CMD_WR",
-                "UMC7C1": "CAS_CMD_WR",
-                "UMC8C1": "CAS_CMD_WR",
-                "UMC9C1": "CAS_CMD_WR"
+                "UMC0C1": "r000a",
+                "UMC10C1": "r000a",
+                "UMC11C1": "r000a",
+                "UMC1C1": "r000a",
+                "UMC2C1": "r000a",
+                "UMC3C1": "r000a",
+                "UMC4C1": "r000a",
+                "UMC5C1": "r000a",
+                "UMC6C1": "r000a",
+                "UMC7C1": "r000a",
+                "UMC8C1": "r000a",
+                "UMC9C1": "r000a"
               }
             },
             {
@@ -4508,30 +4508,30 @@
               "units": "Bytes",
               "formula": "(UMC0C0+UMC1C0+UMC2C0+UMC3C0+UMC4C0+UMC5C0+UMC6C0+UMC7C0+UMC8C0+UMC9C0+UMC10C0+UMC11C0+UMC0C1+UMC1C1+UMC2C1+UMC3C1+UMC4C1+UMC5C1+UMC6C1+UMC7C1+UMC8C1+UMC9C1+UMC10C1+UMC11C1)*64.0",
               "events": {
-                "UMC0C0": "CAS_CMD_RD",
-                "UMC0C1": "CAS_CMD_WR",
-                "UMC10C0": "CAS_CMD_RD",
-                "UMC10C1": "CAS_CMD_WR",
-                "UMC11C0": "CAS_CMD_RD",
-                "UMC11C1": "CAS_CMD_WR",
-                "UMC1C0": "CAS_CMD_RD",
-                "UMC1C1": "CAS_CMD_WR",
-                "UMC2C0": "CAS_CMD_RD",
-                "UMC2C1": "CAS_CMD_WR",
-                "UMC3C0": "CAS_CMD_RD",
-                "UMC3C1": "CAS_CMD_WR",
-                "UMC4C0": "CAS_CMD_RD",
-                "UMC4C1": "CAS_CMD_WR",
-                "UMC5C0": "CAS_CMD_RD",
-                "UMC5C1": "CAS_CMD_WR",
-                "UMC6C0": "CAS_CMD_RD",
-                "UMC6C1": "CAS_CMD_WR",
-                "UMC7C0": "CAS_CMD_RD",
-                "UMC7C1": "CAS_CMD_WR",
-                "UMC8C0": "CAS_CMD_RD",
-                "UMC8C1": "CAS_CMD_WR",
-                "UMC9C0": "CAS_CMD_RD",
-                "UMC9C1": "CAS_CMD_WR"
+                "UMC0C0": "r000a",
+                "UMC0C1": "r000a",
+                "UMC10C0": "r000a",
+                "UMC10C1": "r000a",
+                "UMC11C0": "r000a",
+                "UMC11C1": "r000a",
+                "UMC1C0": "r000a",
+                "UMC1C1": "r000a",
+                "UMC2C0": "r000a",
+                "UMC2C1": "r000a",
+                "UMC3C0": "r000a",
+                "UMC3C1": "r000a",
+                "UMC4C0": "r000a",
+                "UMC4C1": "r000a",
+                "UMC5C0": "r000a",
+                "UMC5C1": "r000a",
+                "UMC6C0": "r000a",
+                "UMC6C1": "r000a",
+                "UMC7C0": "r000a",
+                "UMC7C1": "r000a",
+                "UMC8C0": "r000a",
+                "UMC8C1": "r000a",
+                "UMC9C0": "r000a",
+                "UMC9C1": "r000a"
               }
             }
           ]
@@ -4556,7 +4556,7 @@
               "units": "FLOP",
               "formula": "(PMC2)",
               "events": {
-                "PMC2": "RETIRED_SSE_AVX_FLOPS_ALL"
+                "PMC2": "r1f03"
               }
             },
             {
@@ -4564,7 +4564,7 @@
               "units": "FLOP",
               "formula": "(PMC2)",
               "events": {
-                "PMC2": "RETIRED_SSE_AVX_FLOPS_ALL"
+                "PMC2": "r1f03"
               }
             }
           ],
@@ -4574,18 +4574,18 @@
               "units": "Bytes",
               "formula": "(UMC0C0+UMC1C0+UMC2C0+UMC3C0+UMC4C0+UMC5C0+UMC6C0+UMC7C0+UMC8C0+UMC9C0+UMC10C0+UMC11C0)*64.0",
               "events": {
-                "UMC0C0": "CAS_CMD_RD",
-                "UMC10C0": "CAS_CMD_RD",
-                "UMC11C0": "CAS_CMD_RD",
-                "UMC1C0": "CAS_CMD_RD",
-                "UMC2C0": "CAS_CMD_RD",
-                "UMC3C0": "CAS_CMD_RD",
-                "UMC4C0": "CAS_CMD_RD",
-                "UMC5C0": "CAS_CMD_RD",
-                "UMC6C0": "CAS_CMD_RD",
-                "UMC7C0": "CAS_CMD_RD",
-                "UMC8C0": "CAS_CMD_RD",
-                "UMC9C0": "CAS_CMD_RD"
+                "UMC0C0": "r000a",
+                "UMC10C0": "r000a",
+                "UMC11C0": "r000a",
+                "UMC1C0": "r000a",
+                "UMC2C0": "r000a",
+                "UMC3C0": "r000a",
+                "UMC4C0": "r000a",
+                "UMC5C0": "r000a",
+                "UMC6C0": "r000a",
+                "UMC7C0": "r000a",
+                "UMC8C0": "r000a",
+                "UMC9C0": "r000a"
               }
             },
             {
@@ -4593,18 +4593,18 @@
               "units": "Bytes",
               "formula": "(UMC0C1+UMC1C1+UMC2C1+UMC3C1+UMC4C1+UMC5C1+UMC6C1+UMC7C1+UMC8C1+UMC9C1+UMC10C1+UMC11C1)*64.0",
               "events": {
-                "UMC0C1": "CAS_CMD_WR",
-                "UMC10C1": "CAS_CMD_WR",
-                "UMC11C1": "CAS_CMD_WR",
-                "UMC1C1": "CAS_CMD_WR",
-                "UMC2C1": "CAS_CMD_WR",
-                "UMC3C1": "CAS_CMD_WR",
-                "UMC4C1": "CAS_CMD_WR",
-                "UMC5C1": "CAS_CMD_WR",
-                "UMC6C1": "CAS_CMD_WR",
-                "UMC7C1": "CAS_CMD_WR",
-                "UMC8C1": "CAS_CMD_WR",
-                "UMC9C1": "CAS_CMD_WR"
+                "UMC0C1": "r000a",
+                "UMC10C1": "r000a",
+                "UMC11C1": "r000a",
+                "UMC1C1": "r000a",
+                "UMC2C1": "r000a",
+                "UMC3C1": "r000a",
+                "UMC4C1": "r000a",
+                "UMC5C1": "r000a",
+                "UMC6C1": "r000a",
+                "UMC7C1": "r000a",
+                "UMC8C1": "r000a",
+                "UMC9C1": "r000a"
               }
             },
             {
@@ -4612,30 +4612,30 @@
               "units": "Bytes",
               "formula": "(UMC0C0+UMC1C0+UMC2C0+UMC3C0+UMC4C0+UMC5C0+UMC6C0+UMC7C0+UMC8C0+UMC9C0+UMC10C0+UMC11C0+UMC0C1+UMC1C1+UMC2C1+UMC3C1+UMC4C1+UMC5C1+UMC6C1+UMC7C1+UMC8C1+UMC9C1+UMC10C1+UMC11C1)*64.0",
               "events": {
-                "UMC0C0": "CAS_CMD_RD",
-                "UMC0C1": "CAS_CMD_WR",
-                "UMC10C0": "CAS_CMD_RD",
-                "UMC10C1": "CAS_CMD_WR",
-                "UMC11C0": "CAS_CMD_RD",
-                "UMC11C1": "CAS_CMD_WR",
-                "UMC1C0": "CAS_CMD_RD",
-                "UMC1C1": "CAS_CMD_WR",
-                "UMC2C0": "CAS_CMD_RD",
-                "UMC2C1": "CAS_CMD_WR",
-                "UMC3C0": "CAS_CMD_RD",
-                "UMC3C1": "CAS_CMD_WR",
-                "UMC4C0": "CAS_CMD_RD",
-                "UMC4C1": "CAS_CMD_WR",
-                "UMC5C0": "CAS_CMD_RD",
-                "UMC5C1": "CAS_CMD_WR",
-                "UMC6C0": "CAS_CMD_RD",
-                "UMC6C1": "CAS_CMD_WR",
-                "UMC7C0": "CAS_CMD_RD",
-                "UMC7C1": "CAS_CMD_WR",
-                "UMC8C0": "CAS_CMD_RD",
-                "UMC8C1": "CAS_CMD_WR",
-                "UMC9C0": "CAS_CMD_RD",
-                "UMC9C1": "CAS_CMD_WR"
+                "UMC0C0": "r000a",
+                "UMC0C1": "r000a",
+                "UMC10C0": "r000a",
+                "UMC10C1": "r000a",
+                "UMC11C0": "r000a",
+                "UMC11C1": "r000a",
+                "UMC1C0": "r000a",
+                "UMC1C1": "r000a",
+                "UMC2C0": "r000a",
+                "UMC2C1": "r000a",
+                "UMC3C0": "r000a",
+                "UMC3C1": "r000a",
+                "UMC4C0": "r000a",
+                "UMC4C1": "r000a",
+                "UMC5C0": "r000a",
+                "UMC5C1": "r000a",
+                "UMC6C0": "r000a",
+                "UMC6C1": "r000a",
+                "UMC7C0": "r000a",
+                "UMC7C1": "r000a",
+                "UMC8C0": "r000a",
+                "UMC8C1": "r000a",
+                "UMC9C0": "r000a",
+                "UMC9C1": "r000a"
               }
             }
           ]
@@ -4670,7 +4670,7 @@
               "units": "FLOP",
               "formula": "(PMC2)",
               "events": {
-                "PMC2": "RETIRED_SSE_AVX_FLOPS_ALL_BF16"
+                "PMC2": "r2f03"
               }
             },
             {
@@ -4678,8 +4678,8 @@
               "units": "FLOP",
               "formula": "(PMC2+PMC4)",
               "events": {
-                "PMC2": "RETIRED_SSE_AVX_FLOPS_ALL_DP_SCALAR",
-                "PMC4": "RETIRED_SSE_AVX_FLOPS_ALL_DP_PACKED"
+                "PMC2": "r8f03",
+                "PMC4": "raf03"
               }
             },
             {
@@ -4687,8 +4687,8 @@
               "units": "FLOP",
               "formula": "(PMC2+PMC4)",
               "events": {
-                "PMC2": "RETIRED_SSE_AVX_FLOPS_ALL_SP_SCALAR",
-                "PMC4": "RETIRED_SSE_AVX_FLOPS_ALL_SP_PACKED"
+                "PMC2": "r4f03",
+                "PMC4": "r6f03"
               }
             }
           ],
@@ -4698,18 +4698,18 @@
               "units": "Bytes",
               "formula": "(UMC0C0+UMC1C0+UMC2C0+UMC3C0+UMC4C0+UMC5C0+UMC6C0+UMC7C0+UMC8C0+UMC9C0+UMC10C0+UMC11C0)*64.0",
               "events": {
-                "UMC0C0": "CAS_CMD_RD",
-                "UMC10C0": "CAS_CMD_RD",
-                "UMC11C0": "CAS_CMD_RD",
-                "UMC1C0": "CAS_CMD_RD",
-                "UMC2C0": "CAS_CMD_RD",
-                "UMC3C0": "CAS_CMD_RD",
-                "UMC4C0": "CAS_CMD_RD",
-                "UMC5C0": "CAS_CMD_RD",
-                "UMC6C0": "CAS_CMD_RD",
-                "UMC7C0": "CAS_CMD_RD",
-                "UMC8C0": "CAS_CMD_RD",
-                "UMC9C0": "CAS_CMD_RD"
+                "UMC0C0": "r000a",
+                "UMC10C0": "r000a",
+                "UMC11C0": "r000a",
+                "UMC1C0": "r000a",
+                "UMC2C0": "r000a",
+                "UMC3C0": "r000a",
+                "UMC4C0": "r000a",
+                "UMC5C0": "r000a",
+                "UMC6C0": "r000a",
+                "UMC7C0": "r000a",
+                "UMC8C0": "r000a",
+                "UMC9C0": "r000a"
               }
             },
             {
@@ -4717,18 +4717,18 @@
               "units": "Bytes",
               "formula": "(UMC0C1+UMC1C1+UMC2C1+UMC3C1+UMC4C1+UMC5C1+UMC6C1+UMC7C1+UMC8C1+UMC9C1+UMC10C1+UMC11C1)*64.0",
               "events": {
-                "UMC0C1": "CAS_CMD_WR",
-                "UMC10C1": "CAS_CMD_WR",
-                "UMC11C1": "CAS_CMD_WR",
-                "UMC1C1": "CAS_CMD_WR",
-                "UMC2C1": "CAS_CMD_WR",
-                "UMC3C1": "CAS_CMD_WR",
-                "UMC4C1": "CAS_CMD_WR",
-                "UMC5C1": "CAS_CMD_WR",
-                "UMC6C1": "CAS_CMD_WR",
-                "UMC7C1": "CAS_CMD_WR",
-                "UMC8C1": "CAS_CMD_WR",
-                "UMC9C1": "CAS_CMD_WR"
+                "UMC0C1": "r000a",
+                "UMC10C1": "r000a",
+                "UMC11C1": "r000a",
+                "UMC1C1": "r000a",
+                "UMC2C1": "r000a",
+                "UMC3C1": "r000a",
+                "UMC4C1": "r000a",
+                "UMC5C1": "r000a",
+                "UMC6C1": "r000a",
+                "UMC7C1": "r000a",
+                "UMC8C1": "r000a",
+                "UMC9C1": "r000a"
               }
             },
             {
@@ -4736,30 +4736,30 @@
               "units": "Bytes",
               "formula": "(UMC0C0+UMC1C0+UMC2C0+UMC3C0+UMC4C0+UMC5C0+UMC6C0+UMC7C0+UMC8C0+UMC9C0+UMC10C0+UMC11C0+UMC0C1+UMC1C1+UMC2C1+UMC3C1+UMC4C1+UMC5C1+UMC6C1+UMC7C1+UMC8C1+UMC9C1+UMC10C1+UMC11C1)*64.0",
               "events": {
-                "UMC0C0": "CAS_CMD_RD",
-                "UMC0C1": "CAS_CMD_WR",
-                "UMC10C0": "CAS_CMD_RD",
-                "UMC10C1": "CAS_CMD_WR",
-                "UMC11C0": "CAS_CMD_RD",
-                "UMC11C1": "CAS_CMD_WR",
-                "UMC1C0": "CAS_CMD_RD",
-                "UMC1C1": "CAS_CMD_WR",
-                "UMC2C0": "CAS_CMD_RD",
-                "UMC2C1": "CAS_CMD_WR",
-                "UMC3C0": "CAS_CMD_RD",
-                "UMC3C1": "CAS_CMD_WR",
-                "UMC4C0": "CAS_CMD_RD",
-                "UMC4C1": "CAS_CMD_WR",
-                "UMC5C0": "CAS_CMD_RD",
-                "UMC5C1": "CAS_CMD_WR",
-                "UMC6C0": "CAS_CMD_RD",
-                "UMC6C1": "CAS_CMD_WR",
-                "UMC7C0": "CAS_CMD_RD",
-                "UMC7C1": "CAS_CMD_WR",
-                "UMC8C0": "CAS_CMD_RD",
-                "UMC8C1": "CAS_CMD_WR",
-                "UMC9C0": "CAS_CMD_RD",
-                "UMC9C1": "CAS_CMD_WR"
+                "UMC0C0": "r000a",
+                "UMC0C1": "r000a",
+                "UMC10C0": "r000a",
+                "UMC10C1": "r000a",
+                "UMC11C0": "r000a",
+                "UMC11C1": "r000a",
+                "UMC1C0": "r000a",
+                "UMC1C1": "r000a",
+                "UMC2C0": "r000a",
+                "UMC2C1": "r000a",
+                "UMC3C0": "r000a",
+                "UMC3C1": "r000a",
+                "UMC4C0": "r000a",
+                "UMC4C1": "r000a",
+                "UMC5C0": "r000a",
+                "UMC5C1": "r000a",
+                "UMC6C0": "r000a",
+                "UMC6C1": "r000a",
+                "UMC7C0": "r000a",
+                "UMC7C1": "r000a",
+                "UMC8C0": "r000a",
+                "UMC8C1": "r000a",
+                "UMC9C0": "r000a",
+                "UMC9C1": "r000a"
               }
             }
           ]

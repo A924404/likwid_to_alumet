@@ -21,7 +21,9 @@ FLOPS files are discovered by the `FLOPS*.txt` pattern, and memory files by `MEM
 
 The `architectures` object is nested first by numeric CPU family, then by an array of architecture records. For example, iterating `architectures["6"]` reaches the family-6 architecture records, and the record with `definitions.architecture_abbreviation == "SPR"` is Sapphire Rapids. Each architecture record contains `definitions` and `metrics.flops` / `metrics.memory_volume`. `definitions` contains the shared LIKWID `family_constant`, every associated `models` entry, `architecture_full_name`, and `architecture_abbreviation`. LIKWID assigns the full name and abbreviation together with the architecture/group mapping, so they describe the whole architecture record rather than individual models. Each model entry contains `model_name`, `model_code`, and any conditional mapping information.
 
-Unresolved dependencies are retained as warnings rather than silently changing formulas. Formulas are never evaluated.
+Each event name from a group is resolved against its architecture's `src/includes/perfmon_<architecture>_events.txt` table. The parser associates each `UMASK_` declaration with its preceding `EVENT_` declaration and emits lowercase Linux raw perf syntax as `r<umask><event>` (for example, `RETIRED_SSE_AVX_FLOPS_ALL_DP_PACKED` becomes `raf03` on Zen5). Architecture aliases follow LIKWID's shared event-table backends. If an event or umask cannot be resolved, its value is `not found` and the original name is listed in `unresolved_dependencies`.
+
+Formulas are never evaluated.
 
 The generated `source` object records repository, branch, commit SHA, and generation time. Run the script again to refresh all architectures and replace the JSON from scratch.
 

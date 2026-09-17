@@ -31,6 +31,27 @@ TIME_DIVISION_RE = re.compile(r"/\s*time", re.IGNORECASE)
 ASSUMED_ANNOTATION_RE = re.compile(r"\([^()]*\bassumed\b\)\s*", re.IGNORECASE)
 FLOPS_UNITS = "FLOP"
 MEMORY_UNITS = "Bytes"
+EVENT_TABLE_LINE_RE = re.compile(
+    r"^\s*(EVENT|UMASK)_([A-Za-z0-9_]+)\s+(0x[0-9A-Fa-f]+)(?:\s+\S+)*\s*(?:#.*)?$"
+)
+EVENT_TABLE_ALIASES = {
+    "CLX": "cascadelakeX",
+    "EMR": "emeraldrapids",
+    "GNR": "graniterapids",
+    "ICL": "icelake",
+    "ICX": "icelakeX",
+    "RKL": "icelake",
+    "SPR": "sapphirerapids",
+    "SRF": "sierraforrest",
+    "TGL": "tigerlake",
+    "apple_m1": "applem1",
+    "arm64fx": "a64fx",
+    "arm8": "a57",
+    "arm8_n1": "neon1",
+    "arm8_tx2": "cavtx2",
+    "nvidia_grace": "nvidiagrace",
+    "pentiumm": "pm",
+}
 
 
 @dataclass
@@ -59,6 +80,13 @@ class GroupMetric:
 class ParsedGroup:
     eventset: dict[str, str]
     metrics: list[tuple[str, str]]
+
+
+@dataclass
+class EventTable:
+    events: dict[str, str]
+    umasks: dict[str, str]
+    umask_events: dict[str, str]
 
 
 def download_likwid_source(repo: str, branch: str, keep_workdir: bool) -> tuple[Path, str, Path | None]:
@@ -204,6 +232,48 @@ def parse_group_file(path: Path) -> ParsedGroup:
     return ParsedGroup(eventset=eventset, metrics=metrics)
 
 
+def find_event_table(source_root: Path, architecture: str) -> Path | None:
+    """Find the LIKWID event table used by an architecture group."""
+    table_architecture = EVENT_TABLE_ALIASES.get(architecture, architecture)
+    expected_name = f"perfmon_{table_architecture}_events.txt".lower()
+    includes = source_root / "src/includes"
+    return next((path for path in includes.glob("perfmon_*_events.txt") if path.name.lower() == expected_name), None)
+
+
+def parse_event_table(path: Path) -> EventTable:
+    """Parse EVENT and UMASK declarations from a LIKWID event table."""
+    definitions: dict[str, dict[str, str]] = {"EVENT": {}, "UMASK": {}}
+    umask_events: dict[str, str] = {}
+    current_event = ""
+    for line in path.read_text(encoding="utf-8").splitlines():
+        match = EVENT_TABLE_LINE_RE.match(line)
+        if match:
+            definition_type, name, value = match.groups()
+            hex_value = value[2:].lower()
+            definitions[definition_type][name] = hex_value
+            if definition_type == "EVENT":
+                current_event = hex_value
+            elif current_event:
+                umask_events[name] = current_event
+    return EventTable(events=definitions["EVENT"], umasks=definitions["UMASK"], umask_events=umask_events)
+
+
+def resolve_raw_counter(event_specification: str, event_table: EventTable) -> str:
+    """Compose ``r<umask><event>`` using the longest matching event name."""
+    event_name = event_specification.split(":", 1)[0]
+    if event_name in event_table.umasks and event_name in event_table.umask_events:
+        return f"r{event_table.umasks[event_name]}{event_table.umask_events[event_name]}"
+    candidates = [
+        name
+        for name in event_table.events
+        if event_name == name or event_name.startswith(f"{name}_")
+    ]
+    if not candidates or event_name not in event_table.umasks:
+        return "not found"
+    base_event = max(candidates, key=len)
+    return f"r{event_table.umasks[event_name]}{event_table.events[base_event]}"
+
+
 def _is_flops_metric(name: str, formula: str) -> bool:
     return bool(FLOP_WORD_RE.search(f"{name} {formula}"))
 
@@ -226,7 +296,9 @@ def normalize_formula(formula: str) -> str:
     return ASSUMED_ANNOTATION_RE.sub("", formula)
 
 
-def resolve_metric_dependencies(formula: str, eventset: dict[str, str]) -> tuple[dict[str, str], list[str]]:
+def resolve_metric_dependencies(
+    formula: str, eventset: dict[str, str], event_table: EventTable | None
+) -> tuple[dict[str, str], list[str]]:
     """Resolve eventset counters and event names referenced by a formula."""
     counters = {
         counter
@@ -240,11 +312,20 @@ def resolve_metric_dependencies(formula: str, eventset: dict[str, str]) -> tuple
     for event_name in event_to_counters:
         if re.search(rf"\b{re.escape(event_name)}\b", formula):
             counters.update(event_to_counters[event_name])
-    events = {counter: eventset[counter] for counter in sorted(counters) if counter in eventset}
-    return events, []
+    events: dict[str, str] = {}
+    unresolved: list[str] = []
+    for counter in sorted(counters):
+        event_name = eventset[counter]
+        raw_counter = resolve_raw_counter(event_name, event_table) if event_table else "not found"
+        events[counter] = raw_counter
+        if raw_counter == "not found":
+            unresolved.append(event_name)
+    return events, unresolved
 
 
-def select_metrics(group: ParsedGroup, architecture: str, source_file: str, flops: bool) -> list[GroupMetric]:
+def select_metrics(
+    group: ParsedGroup, architecture: str, source_file: str, flops: bool, event_table: EventTable | None
+) -> list[GroupMetric]:
     selected = []
     for name, formula in group.metrics:
         wanted = _is_flops_metric(name, formula) if flops else _is_memory_volume_metric(name, formula)
@@ -253,7 +334,7 @@ def select_metrics(group: ParsedGroup, architecture: str, source_file: str, flop
         name, _source_units = split_metric_name(name)
         units = FLOPS_UNITS if flops else MEMORY_UNITS
         formula = normalize_formula(formula)
-        events, unresolved = resolve_metric_dependencies(formula, group.eventset)
+        events, unresolved = resolve_metric_dependencies(formula, group.eventset, event_table)
         selected.append(GroupMetric(name, units, formula, source_file, architecture, events, unresolved))
     return selected
 
@@ -264,6 +345,8 @@ def build_architecture_records(source_root: Path, mappings: list[dict[str, objec
     for directory in sorted(path for path in groups.iterdir() if path.is_dir()):
         flops: list[GroupMetric] = []
         memory: list[GroupMetric] = []
+        event_table_path = find_event_table(source_root, directory.name)
+        event_table = parse_event_table(event_table_path) if event_table_path else None
         for path in sorted(directory.iterdir()):
             if not path.is_file():
                 continue
@@ -275,9 +358,9 @@ def build_architecture_records(source_root: Path, mappings: list[dict[str, objec
             if parsed is None:
                 continue
             if MEMORY_FILE_RE.match(path.name):
-                memory.extend(select_metrics(parsed, directory.name, path.name, False))
+                memory.extend(select_metrics(parsed, directory.name, path.name, False, event_table))
             else:
-                flops.extend(select_metrics(parsed, directory.name, path.name, True))
+                flops.extend(select_metrics(parsed, directory.name, path.name, True, event_table))
         if not flops and not memory:
             continue
         mapping = next((item for item in mappings if item["architecture_code"] == directory.name), None)
