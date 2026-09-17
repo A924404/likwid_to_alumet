@@ -59,17 +59,17 @@ the `likwid_flops_profiler` executable under `build/`.
 ## Run the profiler
 
 ```sh
-./build/likwid_flops_profiler <program> [program-args...]
+./build/likwid_flops_profiler [--metrics-file <path-to-likwid_metrics.json>] <program> [program-args...]
 ```
 
 For example, from the repository root:
 
 ```sh
-./demo/build/likwid_flops_profiler /path/to/your/benchmark --its-own-args
+./demo/build/likwid_flops_profiler --metrics-file likwid_metrics.json /path/to/your/benchmark --its-own-args
 ```
 
-It expects `likwid_metrics.json` to be present in the current working
-directory. The tool will:
+`--metrics-file` (or `-m`) is optional and defaults to `likwid_metrics.json` in
+the current working directory. The tool will:
 
 1. Parse `/proc/cpuinfo` to get the CPU family, model, and stepping.
 2. Resolve the matching `architecture_abbreviation` from the JSON (using each

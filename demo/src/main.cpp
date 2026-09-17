@@ -8,12 +8,24 @@
 
 int main(int argc, char** argv) {
     if (argc < 2) {
-        std::cerr << "Usage: " << argv[0] << " <program> [program-args...]\n";
+        std::cerr << "Usage: " << argv[0] << " [--metrics-file <path>] <program> [program-args...]\n";
         return 1;
     }
 
-    const std::string json_path = "likwid_metrics.json";
-    const std::vector<std::string> command(argv + 1, argv + argc);
+    std::string json_path = "likwid_metrics.json";
+    std::vector<std::string> args(argv + 1, argv + argc);
+
+    if (args.size() >= 2 && (args[0] == "--metrics-file" || args[0] == "-m")) {
+        json_path = args[1];
+        args.erase(args.begin(), args.begin() + 2);
+    }
+
+    if (args.empty()) {
+        std::cerr << "Usage: " << argv[0] << " [--metrics-file <path>] <program> [program-args...]\n";
+        return 1;
+    }
+
+    const std::vector<std::string>& command = args;
 
     try {
         CpuInfo cpu = readCpuInfo();
