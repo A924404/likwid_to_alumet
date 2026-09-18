@@ -49,12 +49,29 @@ demo/
 
 ```sh
 cd demo
-cmake -S . -B build -DCMAKE_BUILD_TYPE=Release
+cmake -S . -B build
 cmake --build build -j
 ```
 
 This produces the `likwid_hook` static library and, if libpfm4 was found,
 the `likwid_flops_profiler` executable under `build/`.
+
+### Custom libpfm4 (perfmon) install location
+
+If libpfm4 is installed somewhere other than the default system paths (e.g.
+built from source into a custom prefix), point CMake at it with `PFM_ROOT`:
+
+```sh
+cmake -S . -B build -DPFM_ROOT=/path/to/libpfm4/install
+```
+
+`PFM_ROOT` is expected to contain `include/perfmon/pfmlib.h` and
+`lib/libpfm.*` (or `lib64/`). Alternatively, set `PFM_INCLUDE_DIR` and/or
+`PFM_LIBRARY` directly if headers and library live in unrelated locations:
+
+```sh
+cmake -S . -B build -DPFM_INCLUDE_DIR=/path/to/include -DPFM_LIBRARY=/path/to/lib/libpfm.so
+```
 
 ## Run the profiler
 
