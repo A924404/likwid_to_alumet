@@ -43,6 +43,12 @@ int openCounter(const std::string& event_name, pid_t child) {
 
     attr.disabled = 1;
     attr.enable_on_exec = 1;
+    // Guarantee a dedicated PMC for the whole run; without this the event can be silently
+    // scheduled out (reading back 0) whenever other counters contend for the same PMU slot.
+    attr.pinned = 1;
+    // Needed to detect a counter that never got a hardware slot at all (e.g. all PMCs taken
+    // by the NMI watchdog), which otherwise reads back as an indistinguishable 0.
+    attr.read_format = PERF_FORMAT_TOTAL_TIME_ENABLED | PERF_FORMAT_TOTAL_TIME_RUNNING;
 
     int fd = perf_event_open(&attr, child, -1, -1, 0);
     if (fd < 0) {
@@ -104,13 +110,23 @@ std::map<std::string, double> profile_events(const std::vector<std::string>& com
 
     std::map<std::string, double> results;
     for (size_t i = 0; i < fds.size(); ++i) {
-        uint64_t value = 0;
-        bool read_ok = read(fds[i], &value, sizeof(value)) == sizeof(value);
+        struct {
+            uint64_t value;
+            uint64_t time_enabled;
+            uint64_t time_running;
+        } counter;
+        bool read_ok = read(fds[i], &counter, sizeof(counter)) == sizeof(counter);
         close(fds[i]);
         if (!read_ok) {
             throw std::runtime_error("Could not read counter for '" + event_names[i] + "'");
         }
-        results[event_names[i]] = static_cast<double>(value);
+        if (counter.time_running == 0) {
+            throw std::runtime_error("Event '" + event_names[i] +
+                                      "' was never scheduled onto a hardware counter (no free PMC). This is "
+                                      "commonly caused by the NMI watchdog reserving a counter; try 'echo 0 > "
+                                      "/proc/sys/kernel/nmi_watchdog' (as root) and re-run.");
+        }
+        results[event_names[i]] = static_cast<double>(counter.value);
     }
 
     return results;
