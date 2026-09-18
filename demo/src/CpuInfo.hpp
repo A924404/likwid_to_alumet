@@ -25,6 +25,9 @@ inline CpuInfo readCpuInfo(const std::string& path = "/proc/cpuinfo") {
     };
 
     CpuInfo info;
+    // ARM /proc/cpuinfo has no "cpu family"/"model" fields; use these as a fallback.
+    int armFamily = -1;
+    int armModel = -1;
     std::string line;
     while (std::getline(file, line)) {
         // Only the first processor block is needed: family/model/stepping are uniform per-host.
@@ -43,7 +46,18 @@ inline CpuInfo readCpuInfo(const std::string& path = "/proc/cpuinfo") {
             info.model = std::stoi(value);
         } else if (key == "stepping") {
             info.stepping = std::stoi(value);
+        } else if (key == "CPU architecture") {
+            armFamily = std::stoi(value, nullptr, 0);
+        } else if (key == "CPU implementer") {
+            armModel = std::stoi(value, nullptr, 0);
         }
+    }
+
+    if (info.family < 0 && armFamily >= 0) {
+        info.family = armFamily;
+    }
+    if (info.model < 0 && armModel >= 0) {
+        info.model = armModel;
     }
 
     if (info.family < 0 || info.model < 0) {
